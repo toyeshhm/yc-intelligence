@@ -1,0 +1,14 @@
+{
+  "name": "yc-intelligence",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Open-source YC company intelligence platform",
+  "scripts": {
+    "dev": "npm run dev --prefix apps/web",
+    "build": "npm run build --prefix apps/web",
+    "db:setup": "npm run db:setup --prefix apps/web",
+    "db:import": "npm run db:import --prefix apps/web",
+    "pipeline": "cd pipeline && python run_pipeline.py",
+    "pipeline:import": "npm run pipeline && npm run db:import -- --replace"
+  }
+}
