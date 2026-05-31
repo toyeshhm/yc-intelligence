@@ -1,0 +1,37 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e4]: 05 The Methodology
+    - heading "From raw directory to analyst-ready intelligence." [level=2] [ref=e5]:
+      - text: From raw directory to
+      - emphasis [ref=e6]: analyst-ready intelligence.
+    - paragraph [ref=e7]: A four-stage Python pipeline transforms the live YC Algolia directory into structured, searchable company intelligence. Each stage is modular — swap in your own NLP model, skip the LLM step, or run it headless in CI.
+    - generic [ref=e8]:
+      - generic [ref=e13]: bash · zsh
+      - generic [ref=e14]: "# instant demo"
+      - generic [ref=e15]: $cd apps/web && npm run db:setup && npm run dev
+      - generic [ref=e17]: "# live pipeline"
+      - generic [ref=e18]: $npm run pipeline:import
+  - generic [ref=e19]:
+    - generic [ref=e20]: Pipeline — 4 stages
+    - generic [ref=e21]:
+      - generic [ref=e22]:
+        - generic [ref=e25]: "01"
+        - generic [ref=e27]:
+          - generic [ref=e28]: SCRAPE_YC.PY
+          - generic [ref=e29]: Pulls live YC directory via Algolia API. Captures batch, industry, team size, hiring status.
+      - generic [ref=e30]:
+        - generic [ref=e33]: "02"
+        - generic [ref=e35]:
+          - generic [ref=e36]: EXTRACT_ENTITIES.PY
+          - generic [ref=e37]: Regex and optional spaCy NER extracts funding rounds, founders, and company entities.
+      - generic [ref=e38]:
+        - generic [ref=e41]: "03"
+        - generic [ref=e43]:
+          - generic [ref=e44]: SUMMARIZE.PY
+          - generic [ref=e45]: OpenAI (optional) generates investor-ready profiles from raw extracted data.
+      - generic [ref=e46]:
+        - generic [ref=e49]: "04"
+        - generic [ref=e50]:
+          - generic [ref=e51]: IMPORT_TO_DB.PY
+          - generic [ref=e52]: Loads structured JSON into SQLite via Drizzle ORM, ready for the dashboard.
+    - generic [ref=e55]: modular · headless · ci-ready

@@ -1,0 +1,12 @@
+- contentinfo [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e4]: YC
+    - generic [ref=e5]: Intel
+  - generic [ref=e6]: Open-Source YC Intelligence · MIT
+  - navigation [ref=e7]:
+    - link "Dashboard" [ref=e8] [cursor=pointer]:
+      - /url: "#"
+    - link "GitHub" [ref=e9] [cursor=pointer]:
+      - /url: "#"
+    - link "Designs" [ref=e10] [cursor=pointer]:
+      - /url: "#"

@@ -73,6 +73,22 @@ cp ../.env.example .env   # Optional: OPENAI_API_KEY for live LLM profiles
 python run_pipeline.py    # scrape → extract → summarize → import
 
 cd ../apps/web && npm run dev
+
+## Designs gallery (experimental)
+
+This repository includes an experimental design-inspiration pipeline and frontend gallery.
+
+- Crawl UI/dribbble-style galleries (Playwright + requests/BeautifulSoup) with:
+
+```bash
+# from project root (uses the pipeline venv)
+pipeline/.venv/bin/python pipeline/crawl_designs.py
+```
+
+- The crawler writes `apps/web/data/designs.json` and the web app exposes it at `/api/designs`.
+- View the gallery at `/designs` when the dev server is running.
+
+Respect site terms when scraping live galleries; prefer official APIs when available.
 ```
 
 ## Project Structure

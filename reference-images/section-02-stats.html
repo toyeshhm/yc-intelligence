@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1600">
+<title>YC Intelligence — Section 02: Specimen Facts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --void-black: #070e09;
+    --deep-forest: #0f1a12;
+    --aged-gold: #b78c4e;
+    --forest-green: #4a7c59;
+    --parchment: #e8e0d0;
+    --parchment-dim: rgba(232, 224, 208, 0.55);
+    --parchment-ghost: rgba(232, 224, 208, 0.12);
+    --gold-border: rgba(183, 140, 78, 0.18);
+    --gold-border-stronger: rgba(183, 140, 78, 0.28);
+    --gold-ghost: rgba(183, 140, 78, 0.08);
+    --gold-muted: rgba(183, 140, 78, 0.35);
+  }
+
+  html, body {
+    width: 1600px;
+    height: 600px;
+    overflow: hidden;
+    background: var(--deep-forest);
+  }
+
+  .stats-section {
+    width: 1600px;
+    height: 600px;
+    background: var(--deep-forest);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    /* Top and bottom gold border rules */
+    border-top: 1px solid var(--gold-border-stronger);
+    border-bottom: 1px solid var(--gold-border-stronger);
+
+    /* Subtle noise/texture overlay */
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 50%, rgba(74, 124, 89, 0.04) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 80% at 0% 50%, rgba(183, 140, 78, 0.03) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 80% at 100% 50%, rgba(183, 140, 78, 0.03) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 0;
+    }
+  }
+
+  /* Section header strip — ultra minimal */
+  .section-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    border-bottom: 1px solid var(--gold-border);
+    z-index: 2;
+  }
+
+  .section-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 8px;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    color: var(--aged-gold);
+    opacity: 0.6;
+    text-transform: uppercase;
+  }
+
+  .section-label-right {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 8px;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    color: var(--parchment-dim);
+    opacity: 0.5;
+    text-transform: uppercase;
+  }
+
+  /* 4-column grid — full bleed */
+  .stats-grid {
+    position: absolute;
+    top: 42px;
+    bottom: 42px;
+    left: 0;
+    right: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    z-index: 1;
+  }
+
+  .stat-cell {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 44px 48px 44px 60px;
+    border-right: 1px solid var(--gold-border);
+
+    /* Subtle inner background variation per cell */
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      background: radial-gradient(ellipse 60% 60% at 30% 50%, rgba(183, 140, 78, 0.04) 0%, transparent 70%);
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  /* Ghost index number — top-right corner */
+  .cell-index {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    font-weight: 300;
+    color: var(--parchment);
+    opacity: 0.08;
+    letter-spacing: 0.05em;
+    line-height: 1;
+  }
+
+  /* Thin decorative top accent line per cell */
+  .cell-accent-line {
+    position: absolute;
+    top: 0;
+    left: 56px;
+    width: 32px;
+    height: 1px;
+    background: var(--aged-gold);
+    opacity: 0.5;
+  }
+
+  /* Row label */
+  .stat-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.28em;
+    color: var(--aged-gold);
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    line-height: 1;
+    opacity: 0.9;
+  }
+
+  /* Large number */
+  .stat-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 148px;
+    font-weight: 600;
+    color: var(--parchment);
+    line-height: 0.82;
+    letter-spacing: -0.03em;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .stat-number .currency {
+    font-size: 106px;
+    font-weight: 500;
+    color: var(--parchment);
+    opacity: 0.85;
+    margin-top: 10px;
+    letter-spacing: -0.01em;
+  }
+
+  .stat-number .main-val {
+    /* primary large number part */
+  }
+
+  .stat-number .superscript-gold {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 64px;
+    font-weight: 600;
+    color: var(--aged-gold);
+    margin-top: 12px;
+    margin-left: 3px;
+    line-height: 1;
+    vertical-align: super;
+  }
+
+  /* Italic sub-label */
+  .stat-sublabel {
+    font-family: 'Libre Baskerville', serif;
+    font-style: italic;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--parchment-dim);
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+  }
+
+  /* Faint vertical measurement marks — specimen aesthetic */
+  .cell-measure {
+    position: absolute;
+    bottom: 28px;
+    left: 56px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .measure-line {
+    width: 18px;
+    height: 1px;
+    background: var(--aged-gold);
+    opacity: 0.2;
+  }
+
+  .measure-tick {
+    width: 1px;
+    height: 6px;
+    background: var(--aged-gold);
+    opacity: 0.2;
+  }
+
+  .measure-dot {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    border: 1px solid var(--aged-gold);
+    opacity: 0.18;
+  }
+
+  /* Section footer strip */
+  .section-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    border-top: 1px solid var(--gold-border);
+    z-index: 2;
+  }
+
+  .footer-annotation {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 8px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    color: var(--parchment);
+    opacity: 0.15;
+    text-transform: uppercase;
+  }
+
+  .footer-dots {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .footer-dot {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: var(--aged-gold);
+    opacity: 0.25;
+  }
+
+  .footer-dot.active {
+    opacity: 0.7;
+    background: var(--aged-gold);
+  }
+
+  /* Vertical hairline running behind all — very subtle */
+  .bg-hairline {
+    position: absolute;
+    top: 42px;
+    bottom: 42px;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, rgba(183,140,78,0.06) 30%, rgba(183,140,78,0.06) 70%, transparent);
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  /* Cell 2 subtle warm micro-gradient — differentiator */
+  .stat-cell:nth-child(2) {
+    background: radial-gradient(ellipse 80% 70% at 20% 50%, rgba(183, 140, 78, 0.035) 0%, transparent 70%);
+  }
+
+  /* Cell 4 subtle cool micro-gradient */
+  .stat-cell:nth-child(4) {
+    background: radial-gradient(ellipse 70% 60% at 80% 40%, rgba(74, 124, 89, 0.03) 0%, transparent 65%);
+  }
+
+</style>
+</head>
+<body>
+<section class="stats-section">
+
+  <!-- Section header strip -->
+  <div class="section-header">
+    <span class="section-label">Specimen Facts &nbsp;/&nbsp; §02</span>
+    <span class="section-label-right">YC Intelligence &nbsp;·&nbsp; Archive Metrics &nbsp;·&nbsp; Updated Continuously</span>
+  </div>
+
+  <!-- 4-column stats grid — full bleed -->
+  <div class="stats-grid">
+
+    <!-- Cell 01 — TOTAL INDEXED -->
+    <div class="stat-cell">
+      <div class="cell-accent-line"></div>
+      <span class="cell-index">01</span>
+
+      <div class="stat-label">Total Indexed</div>
+      <div class="stat-number">
+        <span class="main-val">5,247</span>
+      </div>
+      <div class="stat-sublabel">companies, all batches</div>
+
+      <div class="cell-measure">
+        <div class="measure-tick"></div>
+        <div class="measure-line"></div>
+        <div class="measure-dot"></div>
+        <div class="measure-line"></div>
+        <div class="measure-tick"></div>
+      </div>
+    </div>
+
+    <!-- Cell 02 — CAPITAL TRACKED -->
+    <div class="stat-cell">
+      <div class="cell-accent-line"></div>
+      <span class="cell-index">02</span>
+
+      <div class="stat-label">Capital Tracked</div>
+      <div class="stat-number">
+        <span class="currency">$</span><span class="main-val">4.2</span><span class="superscript-gold">B</span>
+      </div>
+      <div class="stat-sublabel">funding rounds mapped</div>
+
+      <div class="cell-measure">
+        <div class="measure-tick"></div>
+        <div class="measure-line"></div>
+        <div class="measure-dot"></div>
+        <div class="measure-line"></div>
+        <div class="measure-tick"></div>
+      </div>
+    </div>
+
+    <!-- Cell 03 — OPEN ROLES -->
+    <div class="stat-cell">
+      <div class="cell-accent-line"></div>
+      <span class="cell-index">03</span>
+
+      <div class="stat-label">Open Roles</div>
+      <div class="stat-number">
+        <span class="main-val">12,400</span>
+      </div>
+      <div class="stat-sublabel">real-time hiring signals</div>
+
+      <div class="cell-measure">
+        <div class="measure-tick"></div>
+        <div class="measure-line"></div>
+        <div class="measure-dot"></div>
+        <div class="measure-line"></div>
+        <div class="measure-tick"></div>
+      </div>
+    </div>
+
+    <!-- Cell 04 — FOUNDERS MAPPED -->
+    <div class="stat-cell">
+      <div class="cell-accent-line"></div>
+      <span class="cell-index">04</span>
+
+      <div class="stat-label">Founders Mapped</div>
+      <div class="stat-number">
+        <span class="main-val">847</span>
+      </div>
+      <div class="stat-sublabel">background profiles</div>
+
+      <div class="cell-measure">
+        <div class="measure-tick"></div>
+        <div class="measure-line"></div>
+        <div class="measure-dot"></div>
+        <div class="measure-line"></div>
+        <div class="measure-tick"></div>
+      </div>
+    </div>
+
+  </div><!-- /.stats-grid -->
+
+  <!-- Section footer strip -->
+  <div class="section-footer">
+    <span class="footer-annotation">The Specimen Vault &nbsp;·&nbsp; Natural History of Startups</span>
+    <div class="footer-dots">
+      <div class="footer-dot"></div>
+      <div class="footer-dot active"></div>
+      <div class="footer-dot"></div>
+      <div class="footer-dot"></div>
+      <div class="footer-dot"></div>
+      <div class="footer-dot"></div>
+      <div class="footer-dot"></div>
+    </div>
+    <span class="footer-annotation">Specimen Facts</span>
+  </div>
+
+</section>
+</body>
+</html>

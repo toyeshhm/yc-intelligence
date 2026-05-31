@@ -1,0 +1,171 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation "Main navigation" [ref=e3]:
+      - link "YC Intel home" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - text: YC Intel
+      - list [ref=e5]:
+        - listitem [ref=e6] [cursor=pointer]: Dashboard
+        - listitem [ref=e7] [cursor=pointer]: Startups
+        - listitem [ref=e8] [cursor=pointer]: Funding
+        - listitem [ref=e9] [cursor=pointer]: Hiring
+      - link "Explore" [ref=e10] [cursor=pointer]:
+        - /url: /dashboard
+    - generic:
+      - button:
+        - img
+      - link:
+        - /url: /dashboard
+        - text: Dashboard
+      - link:
+        - /url: /dashboard/startups
+        - text: Startups
+      - link:
+        - /url: /dashboard/funding
+        - text: Funding
+      - link:
+        - /url: /dashboard/hiring
+        - text: Hiring
+      - link:
+        - /url: /dashboard
+        - text: Explore →
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - generic [ref=e15]: Live Intelligence · 5,247 companies indexed
+        - heading "Every YC startup, decoded." [level=1] [ref=e17]:
+          - text: Every YC startup,
+          - emphasis [ref=e18]: decoded.
+        - paragraph [ref=e19]: Automated pipelines scrape the YC directory, extract entities, and surface funding, hiring, and founder intelligence across 5,200+ companies. Open source and free to run.
+        - generic [ref=e20]:
+          - link "Explore Dashboard" [ref=e21] [cursor=pointer]:
+            - /url: /dashboard
+            - text: Explore Dashboard
+            - img [ref=e23]
+          - link "View source" [ref=e26] [cursor=pointer]:
+            - /url: https://github.com/search?q=yc-intelligence&type=repositories
+      - generic [ref=e29]:
+        - generic [ref=e30]:
+          - text: Top Companies
+          - generic [ref=e32]: LIVE
+        - generic [ref=e33]:
+          - generic [ref=e34]:
+            - generic [ref=e35]: Stripe
+            - generic [ref=e36]: W10
+            - generic [ref=e39]: $95B
+          - generic [ref=e40]:
+            - generic [ref=e41]: Airbnb
+            - generic [ref=e42]: W09
+            - generic [ref=e45]: $75B
+          - generic [ref=e46]:
+            - generic [ref=e47]: OpenAI
+            - generic [ref=e48]: S19
+            - generic [ref=e51]: $11B
+          - generic [ref=e52]:
+            - generic [ref=e53]: Zapier
+            - generic [ref=e54]: W12
+            - generic [ref=e57]: $1.4B
+        - generic [ref=e59]:
+          - generic [ref=e60]:
+            - generic [ref=e61]: 12,400
+            - generic [ref=e62]: open roles tracked
+          - img [ref=e63]
+    - generic [ref=e68]:
+      - generic [ref=e69]:
+        - generic [ref=e70]: "0"
+        - generic [ref=e71]: Companies indexed
+      - generic [ref=e72]:
+        - generic [ref=e73]: $0B
+        - generic [ref=e74]: Funding tracked
+      - generic [ref=e75]:
+        - generic [ref=e76]: "0"
+        - generic [ref=e77]: Open roles tracked
+      - generic [ref=e78]:
+        - generic [ref=e79]: "0"
+        - generic [ref=e80]: Founder profiles
+    - generic [ref=e82]:
+      - generic [ref=e83]:
+        - paragraph [ref=e84]: What’s inside
+        - heading "Six lenses on the YC ecosystem." [level=2] [ref=e85]
+      - generic [ref=e86]:
+        - generic [ref=e88]:
+          - img [ref=e90]
+          - generic [ref=e94]: Startup Directory
+          - generic [ref=e95]: Search and filter 5,200+ YC companies by batch, industry, team size, and hiring status. Full-text search backed by SQLite.
+        - generic [ref=e97]:
+          - img [ref=e99]
+          - generic [ref=e100]: Funding Intelligence
+          - generic [ref=e101]: Track round history, annual volumes, and industry capital maps. See where the money is going across every batch.
+        - generic [ref=e103]:
+          - img [ref=e105]
+          - generic [ref=e108]: Hiring Trends
+          - generic [ref=e109]: Monthly open-role aggregates with industry heatmaps. Spot companies ramping up before it becomes public.
+        - generic [ref=e111]:
+          - img [ref=e113]
+          - generic [ref=e118]: Founder Profiles
+          - generic [ref=e119]: Background extraction, pedigree analysis, and prior employer mapping across every tracked founder.
+        - generic [ref=e121]:
+          - img [ref=e123]
+          - generic [ref=e131]: LLM Profiling
+          - generic [ref=e132]: Optional OpenAI integration generates investor-ready company summaries from raw extracted data.
+        - generic [ref=e134]:
+          - img [ref=e136]
+          - generic [ref=e140]: Pipeline Monitor
+          - generic [ref=e141]: Track scrape runs, import progress, and pipeline status from within the dashboard.
+    - generic [ref=e144]:
+      - generic [ref=e145]:
+        - paragraph [ref=e146]: How it works
+        - heading "From raw directory to analyst-ready intelligence." [level=2] [ref=e147]
+        - paragraph [ref=e148]:
+          - text: The pipeline runs in four stages. Each stage is a standalone Python script you can run individually or chain together with
+          - code [ref=e149]: run_pipeline.py
+          - text: .
+        - generic [ref=e151]: "# demo — instant start cd apps/web && npm run db:setup && npm run dev # live pipeline npm run pipeline:import"
+      - generic [ref=e152]:
+        - generic [ref=e154]:
+          - generic [ref=e156]: "01"
+          - generic [ref=e158]:
+            - generic [ref=e159]: scrape_yc.py
+            - generic [ref=e160]: Pulls live YC directory via Algolia API — batch, industry, team size, hiring status.
+        - generic [ref=e162]:
+          - generic [ref=e164]: "02"
+          - generic [ref=e166]:
+            - generic [ref=e167]: extract_entities.py
+            - generic [ref=e168]: Regex + optional spaCy NER extracts funding rounds, founders, and companies.
+        - generic [ref=e170]:
+          - generic [ref=e172]: "03"
+          - generic [ref=e174]:
+            - generic [ref=e175]: summarize.py
+            - generic [ref=e176]: OpenAI (optional) generates investor-ready profiles from raw extracted data.
+        - generic [ref=e178]:
+          - generic [ref=e180]: "04"
+          - generic [ref=e181]:
+            - generic [ref=e182]: import_to_db.py
+            - generic [ref=e183]: Loads structured JSON into SQLite via Drizzle ORM, ready for the dashboard.
+    - generic [ref=e186]:
+      - heading "Open source. Fork it, run it, extend it." [level=2] [ref=e187]:
+        - emphasis [ref=e188]: Open source.
+        - text: Fork it, run it, extend it.
+      - paragraph [ref=e189]: MIT licensed. No vendor lock-in, no required API keys. Bring your own data pipeline or use the seed data to get started in under a minute.
+      - generic [ref=e190]:
+        - link "Open Dashboard" [ref=e191] [cursor=pointer]:
+          - /url: /dashboard
+          - text: Open Dashboard
+          - img [ref=e193]
+        - link "View on GitHub" [ref=e196] [cursor=pointer]:
+          - /url: https://github.com/search?q=yc-intelligence&type=repositories
+    - contentinfo [ref=e197]:
+      - generic [ref=e198]:
+        - generic [ref=e199]:
+          - generic [ref=e200]: YC Intel
+          - generic [ref=e201]: ·
+          - generic [ref=e202]: Open-source YC company intelligence
+        - generic [ref=e203]:
+          - link "Dashboard" [ref=e204] [cursor=pointer]:
+            - /url: /dashboard
+          - link "GitHub" [ref=e205] [cursor=pointer]:
+            - /url: https://github.com/search?q=yc-intelligence&type=repositories
+          - link "Designs" [ref=e206] [cursor=pointer]:
+            - /url: /designs
+  - button "Open Next.js Dev Tools" [ref=e212] [cursor=pointer]:
+    - img [ref=e213]
+  - alert [ref=e216]

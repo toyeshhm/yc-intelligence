@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1600">
+<title>Section 06 — Open Source CTA · The Specimen Vault</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg-deep:       #0f1a12;
+    --bg-alt:        #142018;
+    --bg-panel:      #101810;
+    --gold:          #b78c4e;
+    --gold-dim:      rgba(183,140,78,0.18);
+    --gold-shadow:   rgba(183,140,78,0.12);
+    --gold-mid:      rgba(183,140,78,0.55);
+    --green:         #4a7c59;
+    --green-dim:     rgba(74,124,89,0.35);
+    --parchment:     #e8e0d0;
+    --parch-dim:     rgba(232,224,208,0.55);
+    --parch-faint:   rgba(232,224,208,0.28);
+    --border-gold:   1px solid var(--gold-dim);
+    --font-display:  'Cormorant Garamond', Georgia, serif;
+    --font-body:     'Libre Baskerville', Georgia, serif;
+    --font-mono:     'JetBrains Mono', 'Courier New', monospace;
+  }
+
+  html, body {
+    width: 1600px;
+    height: 750px;
+    overflow: hidden;
+    background: var(--bg-deep);
+  }
+
+  /* ─── SECTION WRAPPER ─── */
+  .section {
+    position: relative;
+    width: 1600px;
+    height: 750px;
+    background: var(--bg-deep);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  /* ── TOP BORDER (gold hairline) ── */
+  .section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg,
+      transparent 0%,
+      var(--gold-dim) 8%,
+      var(--gold) 35%,
+      var(--gold) 65%,
+      var(--gold-dim) 92%,
+      transparent 100%
+    );
+  }
+
+  /* ── SUBTLE AMBIENT FIELD ── */
+  .section::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 900px 600px at 28% 55%, rgba(74,124,89,0.055) 0%, transparent 70%),
+      radial-gradient(ellipse 700px 500px at 75% 40%, rgba(183,140,78,0.04) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  /* ── SECTION MARK (top-left) ── */
+  .section-mark {
+    position: absolute;
+    top: 34px;
+    left: 80px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    color: var(--parch-faint);
+    text-transform: uppercase;
+    z-index: 10;
+  }
+
+  /* ── SECTION NUMBER (bottom-right corner) ── */
+  .section-number {
+    position: absolute;
+    bottom: 34px;
+    right: 80px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 300;
+    letter-spacing: 0.12em;
+    color: var(--parch-faint);
+    z-index: 10;
+  }
+
+  /* ── MAIN LAYOUT ── */
+  .layout {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    padding: 0 80px;
+    height: 100%;
+    width: 100%;
+  }
+
+  /* ─────────────────────────────────────
+     LEFT COLUMN — 58%
+  ───────────────────────────────────── */
+  .left {
+    flex: 0 0 58%;
+    padding-right: 72px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  /* MIT label */
+  .oss-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    font-weight: 400;
+    letter-spacing: 0.22em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  .oss-label::before {
+    content: '';
+    display: inline-block;
+    width: 22px;
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.6;
+  }
+
+  /* Main heading */
+  .headline {
+    font-family: var(--font-display);
+    font-size: 74px;
+    font-weight: 400;
+    line-height: 1.07;
+    letter-spacing: -0.015em;
+    color: var(--parchment);
+    margin-bottom: 30px;
+  }
+
+  .headline em {
+    font-style: italic;
+    color: var(--gold);
+    font-weight: 300;
+  }
+
+  /* Body copy */
+  .body-copy {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.75;
+    color: var(--parch-dim);
+    max-width: 520px;
+    margin-bottom: 44px;
+  }
+
+  /* CTA row */
+  .cta-row {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 30px;
+    background: var(--gold);
+    color: #0f1a12;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: opacity 0.2s;
+  }
+
+  /* Square corners — no border-radius */
+  .btn-primary::after {
+    content: '→';
+    font-size: 13px;
+  }
+
+  /* Inner shadow decoration for primary btn */
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.15);
+  }
+
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 28px;
+    background: transparent;
+    color: var(--parchment);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    border: 1px solid var(--gold-dim);
+    cursor: pointer;
+    position: relative;
+  }
+
+  /* GitHub icon text proxy */
+  .btn-ghost .gh-icon {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    position: relative;
+    top: 0;
+    opacity: 0.65;
+    font-size: 13px;
+    line-height: 1;
+    font-family: var(--font-mono);
+  }
+
+  /* Horizontal rule below CTAs */
+  .rule-below {
+    margin-top: 48px;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg,
+      var(--gold-dim) 0%,
+      transparent 100%
+    );
+    display: none;
+  }
+
+  /* ─────────────────────────────────────
+     DIVIDER (vertical rule)
+  ───────────────────────────────────── */
+  .col-divider {
+    flex: 0 0 1px;
+    align-self: stretch;
+    background: linear-gradient(180deg,
+      transparent 0%,
+      var(--gold-dim) 15%,
+      rgba(183,140,78,0.22) 50%,
+      var(--gold-dim) 85%,
+      transparent 100%
+    );
+    margin: 80px 0;
+  }
+
+  /* ─────────────────────────────────────
+     RIGHT COLUMN — tech stack card
+  ───────────────────────────────────── */
+  .right {
+    flex: 0 0 42%;
+    padding-left: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  /* ── DOUBLE-BEZEL CARD ── */
+  .tech-card {
+    position: relative;
+    width: 440px;
+    background: var(--bg-alt);
+    border: 1px solid var(--gold-dim);
+    padding: 36px 38px 36px 38px;
+  }
+
+  /* Inner bezel shadow (6px right+down offset) */
+  .tech-card::before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    right: -6px;
+    bottom: -6px;
+    border: 1px solid var(--gold-shadow);
+    background: transparent;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  /* Subtle corner accent — top-right */
+  .tech-card::after {
+    content: '';
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    width: 28px;
+    height: 28px;
+    border-top: 2px solid var(--gold);
+    border-right: 2px solid var(--gold);
+    pointer-events: none;
+  }
+
+  /* Card top label row */
+  .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 26px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--gold-dim);
+  }
+
+  .card-label {
+    font-family: var(--font-mono);
+    font-size: 9.5px;
+    font-weight: 500;
+    letter-spacing: 0.26em;
+    color: var(--gold);
+    text-transform: uppercase;
+  }
+
+  .card-badge {
+    font-family: var(--font-mono);
+    font-size: 8.5px;
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    color: var(--parch-faint);
+    border: 1px solid var(--gold-dim);
+    padding: 3px 8px;
+    text-transform: uppercase;
+  }
+
+  /* Stack rows */
+  .stack-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .stack-row {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(183,140,78,0.08);
+    position: relative;
+  }
+
+  .stack-row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .stack-dot {
+    width: 4px;
+    height: 4px;
+    background: var(--green);
+    flex-shrink: 0;
+    margin-right: 14px;
+    position: relative;
+    top: 0;
+  }
+
+  .stack-name {
+    font-family: var(--font-display);
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--parchment);
+    letter-spacing: 0.01em;
+    flex: 1;
+  }
+
+  .stack-detail {
+    font-family: var(--font-mono);
+    font-size: 9.5px;
+    font-weight: 300;
+    color: var(--parch-faint);
+    letter-spacing: 0.12em;
+    text-align: right;
+    flex-shrink: 0;
+    margin-left: 16px;
+  }
+
+  /* Optional row — slightly dimmed */
+  .stack-row.optional .stack-dot {
+    background: var(--gold);
+    opacity: 0.45;
+  }
+
+  .stack-row.optional .stack-name {
+    color: var(--parch-dim);
+  }
+
+  /* ── CARD FOOTER NOTE ── */
+  .card-footer {
+    margin-top: 22px;
+    padding-top: 16px;
+    border-top: 1px solid var(--gold-dim);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .card-footer-dot {
+    width: 5px;
+    height: 5px;
+    background: var(--green);
+    flex-shrink: 0;
+  }
+
+  .card-footer-text {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    font-weight: 300;
+    color: var(--parch-faint);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  /* ── DECORATIVE ELEMENT — micro coordinate caption bottom-left ── */
+  .geo-caption {
+    position: absolute;
+    bottom: 34px;
+    left: 80px;
+    font-family: var(--font-mono);
+    font-size: 9px;
+    font-weight: 300;
+    letter-spacing: 0.16em;
+    color: var(--parch-faint);
+    z-index: 10;
+  }
+
+  /* ── EDGE DETAIL — left vertical rule accent ── */
+  .edge-accent {
+    position: absolute;
+    left: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 180px;
+    background: linear-gradient(180deg,
+      transparent,
+      var(--gold-dim) 30%,
+      var(--gold-dim) 70%,
+      transparent
+    );
+    z-index: 10;
+  }
+
+  /* Tick marks on edge accent */
+  .edge-accent::before,
+  .edge-accent::after {
+    content: '';
+    position: absolute;
+    left: -2px;
+    width: 5px;
+    height: 1px;
+    background: var(--gold-dim);
+  }
+  .edge-accent::before { top: 0; }
+  .edge-accent::after  { bottom: 0; }
+
+  /* ── FAINT GRID LINES (background texture) ── */
+  .grid-texture {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background-image:
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 59px,
+        rgba(183,140,78,0.03) 59px,
+        rgba(183,140,78,0.03) 60px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 79px,
+        rgba(183,140,78,0.025) 79px,
+        rgba(183,140,78,0.025) 80px
+      );
+  }
+
+</style>
+</head>
+<body>
+
+<section class="section">
+
+  <!-- Background grid texture -->
+  <div class="grid-texture"></div>
+
+  <!-- Top-left section mark -->
+  <div class="section-mark">YC INTELLIGENCE · SECTION 06 / 07</div>
+
+  <!-- Left edge vertical accent -->
+  <div class="edge-accent"></div>
+
+  <!-- Main 2-column layout -->
+  <div class="layout">
+
+    <!-- ─── LEFT: headline + copy + CTAs ─── -->
+    <div class="left">
+
+      <!-- MIT label -->
+      <div class="oss-label">Open Source &middot; MIT Licensed</div>
+
+      <!-- Display heading -->
+      <h2 class="headline">
+        <em>The archive</em><br>
+        is open. Fork it.
+      </h2>
+
+      <!-- Body copy -->
+      <p class="body-copy">
+        No vendor lock-in, no required API keys. Bring your own data pipeline or use the seed data to get started in under a minute.
+      </p>
+
+      <!-- CTA buttons -->
+      <div class="cta-row">
+        <button class="btn-primary">Open Dashboard</button>
+        <button class="btn-ghost">
+          <span class="gh-icon">&#9651;</span>
+          View on GitHub
+        </button>
+      </div>
+
+    </div>
+
+    <!-- ─── VERTICAL DIVIDER ─── -->
+    <div class="col-divider"></div>
+
+    <!-- ─── RIGHT: double-bezel tech stack card ─── -->
+    <div class="right">
+      <div class="tech-card">
+
+        <!-- Card header -->
+        <div class="card-header">
+          <span class="card-label">Tech Stack</span>
+          <span class="card-badge">Open · Auditable</span>
+        </div>
+
+        <!-- Stack rows -->
+        <div class="stack-list">
+
+          <div class="stack-row">
+            <div class="stack-dot"></div>
+            <span class="stack-name">Next.js 16 / React 19</span>
+            <span class="stack-detail">App Router</span>
+          </div>
+
+          <div class="stack-row">
+            <div class="stack-dot"></div>
+            <span class="stack-name">Tailwind CSS 4</span>
+            <span class="stack-detail">No UI kit</span>
+          </div>
+
+          <div class="stack-row">
+            <div class="stack-dot"></div>
+            <span class="stack-name">SQLite + Drizzle</span>
+            <span class="stack-detail">Lightweight</span>
+          </div>
+
+          <div class="stack-row">
+            <div class="stack-dot"></div>
+            <span class="stack-name">Python pipeline</span>
+            <span class="stack-detail">httpx + spaCy</span>
+          </div>
+
+          <div class="stack-row optional">
+            <div class="stack-dot"></div>
+            <span class="stack-name">OpenAI (optional)</span>
+            <span class="stack-detail">gpt-4o-mini</span>
+          </div>
+
+        </div>
+
+        <!-- Card footer -->
+        <div class="card-footer">
+          <div class="card-footer-dot"></div>
+          <span class="card-footer-text">Self-hostable · Zero mandatory SaaS deps</span>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom-left geo caption -->
+  <div class="geo-caption">THE SPECIMEN VAULT · OSS LAYER · v0.1-alpha</div>
+
+  <!-- Bottom-right section number -->
+  <div class="section-number">06 / 07</div>
+
+</section>
+
+</body>
+</html>

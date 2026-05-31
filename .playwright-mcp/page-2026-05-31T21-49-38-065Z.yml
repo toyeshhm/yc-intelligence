@@ -1,0 +1,37 @@
+- generic [ref=e2]:
+  - generic [ref=e3]: YC INTELLIGENCE · SECTION 06 / 07
+  - generic [ref=e5]:
+    - generic [ref=e6]:
+      - generic [ref=e7]: Open Source · MIT Licensed
+      - heading "The archive is open. Fork it." [level=2] [ref=e8]:
+        - emphasis [ref=e9]: The archive
+        - text: is open. Fork it.
+      - paragraph [ref=e10]: No vendor lock-in, no required API keys. Bring your own data pipeline or use the seed data to get started in under a minute.
+      - generic [ref=e11]:
+        - button "Open Dashboard →" [ref=e12] [cursor=pointer]
+        - button "⌥ View on GitHub" [ref=e13] [cursor=pointer]:
+          - generic [ref=e14]: ⌥
+          - text: View on GitHub
+    - generic [ref=e17]:
+      - generic [ref=e18]:
+        - generic [ref=e19]: Tech Stack
+        - generic [ref=e20]: Open · Auditable
+      - generic [ref=e21]:
+        - generic [ref=e22]:
+          - generic [ref=e24]: Next.js 16 / React 19
+          - generic [ref=e25]: App Router
+        - generic [ref=e26]:
+          - generic [ref=e28]: Tailwind CSS 4
+          - generic [ref=e29]: No UI kit
+        - generic [ref=e30]:
+          - generic [ref=e32]: SQLite + Drizzle
+          - generic [ref=e33]: Lightweight
+        - generic [ref=e34]:
+          - generic [ref=e36]: Python pipeline
+          - generic [ref=e37]: httpx + spaCy
+        - generic [ref=e38]:
+          - generic [ref=e40]: OpenAI (optional)
+          - generic [ref=e41]: gpt-4o-mini
+      - generic [ref=e44]: Self-hostable · Zero mandatory SaaS deps
+  - generic [ref=e45]: THE SPECIMEN VAULT · OSS LAYER · v0.1-alpha
+  - generic [ref=e46]: 06 / 07

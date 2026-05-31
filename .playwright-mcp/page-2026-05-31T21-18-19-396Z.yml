@@ -1,0 +1,112 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - img [ref=e6]
+        - generic [ref=e13]: YC Intel
+      - button "Open menu" [ref=e14] [cursor=pointer]:
+        - img [ref=e15]
+    - complementary [ref=e16]:
+      - generic [ref=e17]:
+        - img [ref=e19]
+        - generic [ref=e26]:
+          - paragraph [ref=e27]: YC Intel
+          - paragraph [ref=e28]: Intelligence
+      - navigation [ref=e29]:
+        - generic [ref=e30]:
+          - link "Overview" [ref=e31] [cursor=pointer]:
+            - /url: /dashboard
+            - img [ref=e32]
+            - text: Overview
+          - link "Startups" [ref=e37] [cursor=pointer]:
+            - /url: /dashboard/startups
+            - img [ref=e38]
+            - text: Startups
+          - link "Funding" [ref=e42] [cursor=pointer]:
+            - /url: /dashboard/funding
+            - img [ref=e43]
+            - text: Funding
+          - link "Hiring" [ref=e45] [cursor=pointer]:
+            - /url: /dashboard/hiring
+            - img [ref=e46]
+            - text: Hiring
+          - link "Founders" [ref=e49] [cursor=pointer]:
+            - /url: /dashboard/founders
+            - img [ref=e50]
+            - text: Founders
+          - link "Pipeline" [ref=e55] [cursor=pointer]:
+            - /url: /dashboard/pipeline
+            - img [ref=e56]
+            - text: Pipeline
+      - link "← Back to site" [ref=e61] [cursor=pointer]:
+        - /url: /
+    - main [ref=e62]:
+      - generic [ref=e63]:
+        - heading "Funding Intelligence" [level=1] [ref=e64]
+        - paragraph [ref=e65]: Round velocity and capital deployment across YC batches
+        - generic [ref=e66]:
+          - heading "Annual Funding Volume" [level=3] [ref=e68]
+          - application [ref=e72]:
+            - generic [ref=e83]:
+              - generic [ref=e84]:
+                - generic [ref=e86]: "2005"
+                - generic [ref=e88]: "2006"
+                - generic [ref=e90]: "2007"
+                - generic [ref=e92]: "2008"
+                - generic [ref=e94]: "2009"
+                - generic [ref=e96]: "2010"
+                - generic [ref=e98]: "2011"
+                - generic [ref=e100]: "2012"
+                - generic [ref=e102]: "2013"
+                - generic [ref=e104]: "2014"
+                - generic [ref=e106]: "2015"
+                - generic [ref=e108]: "2016"
+                - generic [ref=e110]: "2017"
+                - generic [ref=e112]: "2018"
+                - generic [ref=e114]: "2019"
+                - generic [ref=e116]: "2020"
+                - generic [ref=e118]: "2021"
+                - generic [ref=e120]: "2022"
+                - generic [ref=e122]: "2023"
+                - generic [ref=e124]: "2024"
+              - generic [ref=e125]:
+                - generic [ref=e127]: $0B
+                - generic [ref=e129]: $2B
+                - generic [ref=e131]: $4B
+                - generic [ref=e133]: $6B
+                - generic [ref=e135]: $8B
+        - generic [ref=e136]:
+          - heading "Funding by Industry" [level=3] [ref=e138]
+          - generic [ref=e140]:
+            - generic [ref=e141]:
+              - generic [ref=e142]: Healthcare
+              - generic [ref=e145]: $21.2B
+              - generic [ref=e146]: 748 cos
+            - generic [ref=e147]:
+              - generic [ref=e148]: Consumer
+              - generic [ref=e151]: $20.2B
+              - generic [ref=e152]: 740 cos
+            - generic [ref=e153]:
+              - generic [ref=e154]: Infrastructure
+              - generic [ref=e157]: $19.5B
+              - generic [ref=e158]: 784 cos
+            - generic [ref=e159]:
+              - generic [ref=e160]: B2B SaaS
+              - generic [ref=e163]: $19.1B
+              - generic [ref=e164]: 787 cos
+            - generic [ref=e165]:
+              - generic [ref=e166]: Fintech
+              - generic [ref=e169]: $18.4B
+              - generic [ref=e170]: 685 cos
+            - generic [ref=e171]:
+              - generic [ref=e172]: Hard Tech
+              - generic [ref=e175]: $18.4B
+              - generic [ref=e176]: 749 cos
+            - generic [ref=e177]:
+              - generic [ref=e178]: AI/ML
+              - generic [ref=e181]: $17.4B
+              - generic [ref=e182]: 707 cos
+  - button "Open Next.js Dev Tools" [ref=e188] [cursor=pointer]:
+    - img [ref=e189]
+  - alert [ref=e192]
+  - generic [ref=e193]: $0B

@@ -1,0 +1,331 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - img [ref=e6]
+        - generic [ref=e13]: YC Intel
+      - button "Open menu" [ref=e14] [cursor=pointer]:
+        - img [ref=e15]
+    - complementary [ref=e16]:
+      - generic [ref=e17]:
+        - img [ref=e19]
+        - generic [ref=e26]:
+          - paragraph [ref=e27]: YC Intel
+          - paragraph [ref=e28]: Intelligence
+      - navigation [ref=e29]:
+        - generic [ref=e30]:
+          - link "Overview" [ref=e31] [cursor=pointer]:
+            - /url: /dashboard
+            - img [ref=e32]
+            - text: Overview
+          - link "Startups" [ref=e37] [cursor=pointer]:
+            - /url: /dashboard/startups
+            - img [ref=e38]
+            - text: Startups
+          - link "Funding" [ref=e42] [cursor=pointer]:
+            - /url: /dashboard/funding
+            - img [ref=e43]
+            - text: Funding
+          - link "Hiring" [ref=e45] [cursor=pointer]:
+            - /url: /dashboard/hiring
+            - img [ref=e46]
+            - text: Hiring
+          - link "Founders" [ref=e49] [cursor=pointer]:
+            - /url: /dashboard/founders
+            - img [ref=e50]
+            - text: Founders
+          - link "Pipeline" [ref=e55] [cursor=pointer]:
+            - /url: /dashboard/pipeline
+            - img [ref=e56]
+            - text: Pipeline
+      - link "← Back to site" [ref=e61] [cursor=pointer]:
+        - /url: /
+    - main [ref=e62]:
+      - generic [ref=e63]:
+        - generic [ref=e64]:
+          - heading "YC Startups" [level=1] [ref=e65]
+          - paragraph [ref=e66]: 5,200 companies indexed
+        - generic [ref=e67]:
+          - generic [ref=e68]:
+            - img [ref=e69]
+            - textbox "Search by name..." [ref=e72]
+          - combobox [ref=e73]:
+            - option "All batches" [selected]
+            - option "W25"
+            - option "W24"
+            - option "W23"
+            - option "W22"
+            - option "W21"
+            - option "W20"
+            - option "W19"
+            - option "W18"
+            - option "W17"
+            - option "W16"
+            - option "W15"
+            - option "W14"
+            - option "W13"
+            - option "W12"
+            - option "W11"
+            - option "W10"
+            - option "W09"
+            - option "W08"
+            - option "W07"
+            - option "W06"
+            - option "W05"
+            - option "S24"
+            - option "S23"
+            - option "S22"
+            - option "S21"
+            - option "S20"
+            - option "S19"
+            - option "S18"
+            - option "S17"
+            - option "S16"
+            - option "S15"
+            - option "S14"
+            - option "S13"
+            - option "S12"
+            - option "S11"
+            - option "S10"
+            - option "S09"
+            - option "S08"
+            - option "S07"
+            - option "S06"
+            - option "S05"
+            - option "F24"
+          - combobox [ref=e74]:
+            - option "All industries" [selected]
+            - option "AI/ML"
+            - option "B2B SaaS"
+            - option "Consumer"
+            - option "Fintech"
+            - option "Hard Tech"
+            - option "Healthcare"
+            - option "Infrastructure"
+        - generic [ref=e75]:
+          - checkbox "Hiring only" [ref=e76]
+          - text: Hiring only
+        - generic [ref=e77]:
+          - link "Relay Grid S05 Modern computer vision platform for ai/ml teams. AI/ML $306.3M" [ref=e78] [cursor=pointer]:
+            - /url: /dashboard/startups/relay-grid-729
+            - generic [ref=e79]:
+              - heading "Relay Grid" [level=2] [ref=e80]
+              - generic [ref=e81]: S05
+            - paragraph [ref=e82]: Modern computer vision platform for ai/ml teams.
+            - generic [ref=e83]:
+              - generic [ref=e84]: AI/ML
+              - generic [ref=e85]: $306.3M
+          - link "Atlas352 S12 Modern robotics platform for ai/ml teams. AI/ML $304.7M" [ref=e86] [cursor=pointer]:
+            - /url: /dashboard/startups/atlas352-36
+            - generic [ref=e87]:
+              - heading "Atlas352" [level=2] [ref=e88]
+              - generic [ref=e89]: S12
+            - paragraph [ref=e90]: Modern robotics platform for ai/ml teams.
+            - generic [ref=e91]:
+              - generic [ref=e92]: AI/ML
+              - generic [ref=e93]: $304.7M
+          - link "Voxel Cloud S06 Modern energy platform for hard tech teams. Hard Tech $301.4M" [ref=e94] [cursor=pointer]:
+            - /url: /dashboard/startups/voxel-cloud-1466
+            - generic [ref=e95]:
+              - heading "Voxel Cloud" [level=2] [ref=e96]
+              - generic [ref=e97]: S06
+            - paragraph [ref=e98]: Modern energy platform for hard tech teams.
+            - generic [ref=e99]:
+              - generic [ref=e100]: Hard Tech
+              - generic [ref=e101]: $301.4M
+          - link "UplinkStack W14 Modern agents platform for ai/ml teams. AI/ML $296.5M" [ref=e102] [cursor=pointer]:
+            - /url: /dashboard/startups/uplinkstack-2189
+            - generic [ref=e103]:
+              - heading "UplinkStack" [level=2] [ref=e104]
+              - generic [ref=e105]: W14
+            - paragraph [ref=e106]: Modern agents platform for ai/ml teams.
+            - generic [ref=e107]:
+              - generic [ref=e108]: AI/ML
+              - generic [ref=e109]: $296.5M
+          - link "Catalyst699 S07 Modern observability platform for infrastructure teams. Infrastructure $295.6M" [ref=e110] [cursor=pointer]:
+            - /url: /dashboard/startups/catalyst699-3022
+            - generic [ref=e111]:
+              - heading "Catalyst699" [level=2] [ref=e112]
+              - generic [ref=e113]: S07
+            - paragraph [ref=e114]: Modern observability platform for infrastructure teams.
+            - generic [ref=e115]:
+              - generic [ref=e116]: Infrastructure
+              - generic [ref=e117]: $295.6M
+          - link "ApexLogic W18 Modern diagnostics platform for healthcare teams. Healthcare $294.5M" [ref=e118] [cursor=pointer]:
+            - /url: /dashboard/startups/apexlogic-2707
+            - generic [ref=e119]:
+              - heading "ApexLogic" [level=2] [ref=e120]
+              - generic [ref=e121]: W18
+            - paragraph [ref=e122]: Modern diagnostics platform for healthcare teams.
+            - generic [ref=e123]:
+              - generic [ref=e124]: Healthcare
+              - generic [ref=e125]: $294.5M
+          - link "Signal Systems W06 Modern education platform for consumer teams. Consumer $293.7M" [ref=e126] [cursor=pointer]:
+            - /url: /dashboard/startups/signal-systems-1945
+            - generic [ref=e127]:
+              - heading "Signal Systems" [level=2] [ref=e128]
+              - generic [ref=e129]: W06
+            - paragraph [ref=e130]: Modern education platform for consumer teams.
+            - generic [ref=e131]:
+              - generic [ref=e132]: Consumer
+              - generic [ref=e133]: $293.7M
+          - link "Onyx926 W15 Modern marketplace platform for consumer teams. Consumer $292.6M" [ref=e134] [cursor=pointer]:
+            - /url: /dashboard/startups/onyx926-1935
+            - generic [ref=e135]:
+              - heading "Onyx926" [level=2] [ref=e136]
+              - generic [ref=e137]: W15
+            - paragraph [ref=e138]: Modern marketplace platform for consumer teams.
+            - generic [ref=e139]:
+              - generic [ref=e140]: Consumer
+              - generic [ref=e141]: $292.6M
+          - link "Harbor668 W11 Modern agents platform for ai/ml teams. AI/ML $292.1M" [ref=e142] [cursor=pointer]:
+            - /url: /dashboard/startups/harbor668-3255
+            - generic [ref=e143]:
+              - heading "Harbor668" [level=2] [ref=e144]
+              - generic [ref=e145]: W11
+            - paragraph [ref=e146]: Modern agents platform for ai/ml teams.
+            - generic [ref=e147]:
+              - generic [ref=e148]: AI/ML
+              - generic [ref=e149]: $292.1M
+          - link "Parallax IO S23 Modern crypto platform for fintech teams. Fintech $291.3M" [ref=e150] [cursor=pointer]:
+            - /url: /dashboard/startups/parallax-io-3786
+            - generic [ref=e151]:
+              - heading "Parallax IO" [level=2] [ref=e152]
+              - generic [ref=e153]: S23
+            - paragraph [ref=e154]: Modern crypto platform for fintech teams.
+            - generic [ref=e155]:
+              - generic [ref=e156]: Fintech
+              - generic [ref=e157]: $291.3M
+          - link "Stride907 F24 Modern crypto platform for fintech teams. Fintech $287.7M" [ref=e158] [cursor=pointer]:
+            - /url: /dashboard/startups/stride907-2878
+            - generic [ref=e159]:
+              - heading "Stride907" [level=2] [ref=e160]
+              - generic [ref=e161]: F24
+            - paragraph [ref=e162]: Modern crypto platform for fintech teams.
+            - generic [ref=e163]:
+              - generic [ref=e164]: Fintech
+              - generic [ref=e165]: $287.7M
+          - link "Relay Systems W14 Modern social platform for consumer teams. Consumer $287.2M" [ref=e166] [cursor=pointer]:
+            - /url: /dashboard/startups/relay-systems-2408
+            - generic [ref=e167]:
+              - heading "Relay Systems" [level=2] [ref=e168]
+              - generic [ref=e169]: W14
+            - paragraph [ref=e170]: Modern social platform for consumer teams.
+            - generic [ref=e171]:
+              - generic [ref=e172]: Consumer
+              - generic [ref=e173]: $287.2M
+          - link "HelixPath F24 Modern education platform for consumer teams. Consumer $286.0M" [ref=e174] [cursor=pointer]:
+            - /url: /dashboard/startups/helixpath-563
+            - generic [ref=e175]:
+              - heading "HelixPath" [level=2] [ref=e176]
+              - generic [ref=e177]: F24
+            - paragraph [ref=e178]: Modern education platform for consumer teams.
+            - generic [ref=e179]:
+              - generic [ref=e180]: Consumer
+              - generic [ref=e181]: $286.0M
+          - link "StrideLink W24 Modern gaming platform for consumer teams. Consumer $286.0M" [ref=e182] [cursor=pointer]:
+            - /url: /dashboard/startups/stridelink-1085
+            - generic [ref=e183]:
+              - heading "StrideLink" [level=2] [ref=e184]
+              - generic [ref=e185]: W24
+            - paragraph [ref=e186]: Modern gaming platform for consumer teams.
+            - generic [ref=e187]:
+              - generic [ref=e188]: Consumer
+              - generic [ref=e189]: $286.0M
+          - link "Flux522 W23 Modern finance platform for b2b saas teams. B2B SaaS $283.8M" [ref=e190] [cursor=pointer]:
+            - /url: /dashboard/startups/flux522-1008
+            - generic [ref=e191]:
+              - heading "Flux522" [level=2] [ref=e192]
+              - generic [ref=e193]: W23
+            - paragraph [ref=e194]: Modern finance platform for b2b saas teams.
+            - generic [ref=e195]:
+              - generic [ref=e196]: B2B SaaS
+              - generic [ref=e197]: $283.8M
+          - link "Tidal AI S08 Modern finance platform for b2b saas teams. B2B SaaS $283.1M" [ref=e198] [cursor=pointer]:
+            - /url: /dashboard/startups/tidal-ai-4396
+            - generic [ref=e199]:
+              - heading "Tidal AI" [level=2] [ref=e200]
+              - generic [ref=e201]: S08
+            - paragraph [ref=e202]: Modern finance platform for b2b saas teams.
+            - generic [ref=e203]:
+              - generic [ref=e204]: B2B SaaS
+              - generic [ref=e205]: $283.1M
+          - link "LatticeGrid W22 Modern networking platform for infrastructure teams. Infrastructure $282.5M" [ref=e206] [cursor=pointer]:
+            - /url: /dashboard/startups/latticegrid-2213
+            - generic [ref=e207]:
+              - heading "LatticeGrid" [level=2] [ref=e208]
+              - generic [ref=e209]: W22
+            - paragraph [ref=e210]: Modern networking platform for infrastructure teams.
+            - generic [ref=e211]:
+              - generic [ref=e212]: Infrastructure
+              - generic [ref=e213]: $282.5M
+          - link "Parallax Labs W06 Modern medtech platform for healthcare teams. Healthcare $281.4M" [ref=e214] [cursor=pointer]:
+            - /url: /dashboard/startups/parallax-labs-2277
+            - generic [ref=e215]:
+              - heading "Parallax Labs" [level=2] [ref=e216]
+              - generic [ref=e217]: W06
+            - paragraph [ref=e218]: Modern medtech platform for healthcare teams.
+            - generic [ref=e219]:
+              - generic [ref=e220]: Healthcare
+              - generic [ref=e221]: $281.4M
+          - link "Echo183 W24 Modern health platform for consumer teams. Consumer $281.1M" [ref=e222] [cursor=pointer]:
+            - /url: /dashboard/startups/echo183-4892
+            - generic [ref=e223]:
+              - heading "Echo183" [level=2] [ref=e224]
+              - generic [ref=e225]: W24
+            - paragraph [ref=e226]: Modern health platform for consumer teams.
+            - generic [ref=e227]:
+              - generic [ref=e228]: Consumer
+              - generic [ref=e229]: $281.1M
+          - link "Lumen Stack W16 Modern agents platform for ai/ml teams. AI/ML $280.0M" [ref=e230] [cursor=pointer]:
+            - /url: /dashboard/startups/lumen-stack-2672
+            - generic [ref=e231]:
+              - heading "Lumen Stack" [level=2] [ref=e232]
+              - generic [ref=e233]: W16
+            - paragraph [ref=e234]: Modern agents platform for ai/ml teams.
+            - generic [ref=e235]:
+              - generic [ref=e236]: AI/ML
+              - generic [ref=e237]: $280.0M
+          - link "Apex458 S05 Modern data platform for infrastructure teams. Infrastructure $277.2M" [ref=e238] [cursor=pointer]:
+            - /url: /dashboard/startups/apex458-3180
+            - generic [ref=e239]:
+              - heading "Apex458" [level=2] [ref=e240]
+              - generic [ref=e241]: S05
+            - paragraph [ref=e242]: Modern data platform for infrastructure teams.
+            - generic [ref=e243]:
+              - generic [ref=e244]: Infrastructure
+              - generic [ref=e245]: $277.2M
+          - link "Flux Mind S23 Modern llm infrastructure platform for ai/ml teams. AI/ML $277.0M" [ref=e246] [cursor=pointer]:
+            - /url: /dashboard/startups/flux-mind-5133
+            - generic [ref=e247]:
+              - heading "Flux Mind" [level=2] [ref=e248]
+              - generic [ref=e249]: S23
+            - paragraph [ref=e250]: Modern llm infrastructure platform for ai/ml teams.
+            - generic [ref=e251]:
+              - generic [ref=e252]: AI/ML
+              - generic [ref=e253]: $277.0M
+          - link "Quanta411 S16 Modern computer vision platform for ai/ml teams. AI/ML $276.5M" [ref=e254] [cursor=pointer]:
+            - /url: /dashboard/startups/quanta411-3805
+            - generic [ref=e255]:
+              - heading "Quanta411" [level=2] [ref=e256]
+              - generic [ref=e257]: S16
+            - paragraph [ref=e258]: Modern computer vision platform for ai/ml teams.
+            - generic [ref=e259]:
+              - generic [ref=e260]: AI/ML
+              - generic [ref=e261]: $276.5M
+          - link "MosaicIO W23 Modern lending platform for fintech teams. Fintech $275.9M" [ref=e262] [cursor=pointer]:
+            - /url: /dashboard/startups/mosaicio-4908
+            - generic [ref=e263]:
+              - heading "MosaicIO" [level=2] [ref=e264]
+              - generic [ref=e265]: W23
+            - paragraph [ref=e266]: Modern lending platform for fintech teams.
+            - generic [ref=e267]:
+              - generic [ref=e268]: Fintech
+              - generic [ref=e269]: $275.9M
+        - generic [ref=e270]:
+          - button "Previous" [disabled]
+          - generic [ref=e271]: Page 1 of 217
+          - button "Next" [ref=e272]
+  - button "Open Next.js Dev Tools" [ref=e278] [cursor=pointer]:
+    - img [ref=e279]
+  - alert [ref=e282]

@@ -1,0 +1,59 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - img [ref=e6]
+        - generic [ref=e13]: YC Intel
+      - button "Open menu" [ref=e14] [cursor=pointer]:
+        - img [ref=e15]
+    - complementary [ref=e16]:
+      - generic [ref=e17]:
+        - img [ref=e19]
+        - generic [ref=e26]:
+          - paragraph [ref=e27]: YC Intel
+          - paragraph [ref=e28]: Intelligence
+      - navigation [ref=e29]:
+        - generic [ref=e30]:
+          - link "Overview" [ref=e31] [cursor=pointer]:
+            - /url: /dashboard
+            - img [ref=e32]
+            - text: Overview
+          - link "Startups" [ref=e37] [cursor=pointer]:
+            - /url: /dashboard/startups
+            - img [ref=e38]
+            - text: Startups
+          - link "Funding" [ref=e42] [cursor=pointer]:
+            - /url: /dashboard/funding
+            - img [ref=e43]
+            - text: Funding
+          - link "Hiring" [ref=e45] [cursor=pointer]:
+            - /url: /dashboard/hiring
+            - img [ref=e46]
+            - text: Hiring
+          - link "Founders" [ref=e49] [cursor=pointer]:
+            - /url: /dashboard/founders
+            - img [ref=e50]
+            - text: Founders
+          - link "Pipeline" [ref=e55] [cursor=pointer]:
+            - /url: /dashboard/pipeline
+            - img [ref=e56]
+            - text: Pipeline
+      - link "← Back to site" [ref=e61] [cursor=pointer]:
+        - /url: /
+    - main [ref=e62]:
+      - generic [ref=e63]:
+        - heading "Something went wrong" [level=2] [ref=e64]
+        - paragraph [ref=e65]: An unexpected error occurred loading this page.
+        - button "Try again" [ref=e66]
+  - generic [ref=e71] [cursor=pointer]:
+    - button "Open Next.js Dev Tools" [ref=e72]:
+      - img [ref=e73]
+    - generic [ref=e76]:
+      - button "Open issues overlay" [ref=e77]:
+        - generic [ref=e78]:
+          - generic [ref=e79]: "0"
+          - generic [ref=e80]: "1"
+        - generic [ref=e81]: Issue
+      - button "Collapse issues badge" [ref=e82]:
+        - img [ref=e83]
+  - alert [ref=e85]

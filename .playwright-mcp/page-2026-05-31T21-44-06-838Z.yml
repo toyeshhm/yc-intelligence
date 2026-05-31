@@ -1,0 +1,90 @@
+- generic [ref=e2]:
+  - navigation [ref=e3]:
+    - generic [ref=e4]: YC Intelligence / The Specimen Vault
+    - list [ref=e5]:
+      - listitem [ref=e6]:
+        - link "Archive" [ref=e7] [cursor=pointer]:
+          - /url: "#"
+      - listitem [ref=e8]:
+        - link "Batches" [ref=e9] [cursor=pointer]:
+          - /url: "#"
+      - listitem [ref=e10]:
+        - link "Founders" [ref=e11] [cursor=pointer]:
+          - /url: "#"
+      - listitem [ref=e12]:
+        - link "Signals" [ref=e13] [cursor=pointer]:
+          - /url: "#"
+      - listitem [ref=e14]:
+        - link "About" [ref=e15] [cursor=pointer]:
+          - /url: "#"
+    - generic [ref=e16]: Pipeline active · 5,247 specimens indexed
+  - generic [ref=e18]:
+    - generic [ref=e19]:
+      - generic [ref=e21]: Specimen Catalogue · Cat. No. YC-5247 · Est. W05
+      - generic [ref=e23]:
+        - generic [ref=e24]: Every YC startup,
+        - generic [ref=e25]: catalogued.
+        - generic [ref=e26]: Open. Free. Complete.
+      - paragraph [ref=e28]: Automated pipelines collect, extract, and classify 5,200+ YC companies — funding rounds, hiring signals, founder backgrounds, and competitive positioning.
+      - generic [ref=e29]:
+        - button "Open the Archive →" [ref=e30] [cursor=pointer]
+        - button "View Source" [ref=e31] [cursor=pointer]
+    - generic [ref=e34]:
+      - generic [ref=e35]:
+        - generic [ref=e36]: Top Specimens · W25 Batch
+        - generic [ref=e37]: Live feed
+      - generic [ref=e39]:
+        - generic [ref=e40]:
+          - generic [ref=e41]: "01"
+          - generic [ref=e42]: Meridian Health AI
+          - generic [ref=e43]: W25
+          - generic [ref=e47]: $24.2M raised
+        - generic [ref=e48]:
+          - generic [ref=e49]: "02"
+          - generic [ref=e50]: Solaris Compute
+          - generic [ref=e51]: W25
+          - generic [ref=e55]: $18.7M raised
+        - generic [ref=e56]:
+          - generic [ref=e57]: "03"
+          - generic [ref=e58]: Carraway Legal
+          - generic [ref=e59]: W25
+          - generic [ref=e63]: $11.4M raised
+        - generic [ref=e64]:
+          - generic [ref=e65]: "04"
+          - generic [ref=e66]: Dune Materials
+          - generic [ref=e67]: W25
+          - generic [ref=e71]: $8.1M raised
+      - generic [ref=e72]:
+        - generic [ref=e73]:
+          - generic [ref=e74]: 12,400
+          - generic [ref=e75]: Open roles
+        - generic [ref=e76]:
+          - generic [ref=e77]: $4.2B
+          - generic [ref=e78]: Capital mapped
+  - generic [ref=e79]:
+    - generic [ref=e80]: Latest ·
+    - generic [ref=e81]:
+      - generic [ref=e82]:
+        - generic [ref=e83]: Meridian Health
+        - generic [ref=e84]: ·
+        - generic [ref=e85]: +$24M Series A
+      - generic [ref=e86]:
+        - generic [ref=e87]: Solaris Compute
+        - generic [ref=e88]: ·
+        - generic [ref=e89]: Seed closed
+      - generic [ref=e90]:
+        - generic [ref=e91]: Carraway Legal
+        - generic [ref=e92]: ·
+        - generic [ref=e93]: 14 open roles
+      - generic [ref=e94]:
+        - generic [ref=e95]: Dune Materials
+        - generic [ref=e96]: ·
+        - generic [ref=e97]: New founding signal
+      - generic [ref=e98]:
+        - generic [ref=e99]: Vanta Ops
+        - generic [ref=e100]: ·
+        - generic [ref=e101]: +$8M raised
+      - generic [ref=e102]:
+        - generic [ref=e103]: Helios Cloud
+        - generic [ref=e104]: ·
+        - generic [ref=e105]: CEO updated LinkedIn

@@ -1,0 +1,60 @@
+- generic [ref=e2]:
+  - generic [ref=e4]: 03 / 07 — The Collection
+  - generic [ref=e5]:
+    - generic [ref=e6]:
+      - generic [ref=e7]: The Vault · 5,247 Specimens
+      - heading "The full YC archive, classified." [level=2] [ref=e8]:
+        - text: The full YC archive,
+        - emphasis [ref=e9]: classified.
+    - generic [ref=e10]:
+      - paragraph [ref=e11]: Every company that passed through YC's doors, catalogued by batch, sector, and stage. A living specimen cabinet for the serious operator, investor, or researcher.
+      - button "Browse Archive →" [ref=e12] [cursor=pointer]
+  - generic [ref=e13]:
+    - generic [ref=e14]:
+      - generic: "01"
+      - generic [ref=e18]: Specimen · W10 · Fintech
+      - generic [ref=e19]: Stripe
+      - generic [ref=e21]:
+        - text: Payments infrastructure for the internet.
+        - text: The backbone of global digital commerce.
+      - generic [ref=e23]: Series I · $95B
+      - generic [ref=e24]:
+        - generic [ref=e25]: Fintech
+        - generic [ref=e26]: B2B
+        - generic [ref=e27]: Hiring
+      - generic [ref=e28]: "Accession: YC-W10-0001 · Catalogued 2010"
+      - generic [ref=e29]:
+        - generic [ref=e30]: Specimen No.
+        - text: "001"
+    - generic [ref=e31]:
+      - generic [ref=e33]: Specimen · W09 · Travel
+      - generic [ref=e34]: Airbnb
+      - generic [ref=e35]: Marketplace for short-term lodging.
+      - generic [ref=e37]: IPO · $75B
+      - generic [ref=e38]:
+        - generic [ref=e39]: Travel
+        - generic [ref=e40]: Marketplace
+    - generic [ref=e41]:
+      - generic [ref=e43]: Specimen · S19 · AI/ML
+      - generic [ref=e44]: OpenAI
+      - generic [ref=e45]: AI research and deployment.
+      - generic [ref=e47]: Series E · $11B
+      - generic [ref=e48]:
+        - generic [ref=e49]: AI/ML
+        - generic [ref=e50]: Research
+    - generic [ref=e51]:
+      - generic [ref=e53]: Specimen · W12 · Automation
+      - generic [ref=e54]: Zapier
+      - generic [ref=e55]: Workflow automation for everyone.
+      - generic [ref=e57]: Bootstrapped · $1.4B
+      - generic [ref=e58]:
+        - generic [ref=e59]: Automation
+        - generic [ref=e60]: SaaS
+    - generic [ref=e61]:
+      - generic [ref=e63]: Specimen · W11 · Biotech
+      - generic [ref=e64]: Ginkgo Bioworks
+      - generic [ref=e65]: Cell programming platform.
+      - generic [ref=e67]: IPO · $2.8B
+      - generic [ref=e68]:
+        - generic [ref=e69]: Biotech
+        - generic [ref=e70]: DeepTech

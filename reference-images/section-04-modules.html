@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1600">
+<title>YC Intelligence — Section 04: Intelligence Modules</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  :root {
+    --bg: #0f1a12;
+    --gold: #b78c4e;
+    --gold-dim: rgba(183,140,78,0.55);
+    --gold-border: rgba(183,140,78,0.18);
+    --green: #4a7c59;
+    --green-active: rgba(74,124,89,0.2);
+    --green-border: rgba(74,124,89,0.2);
+    --parchment: #e8e0d0;
+    --parchment-dim: rgba(232,224,208,0.55);
+    --parchment-faint: rgba(232,224,208,0.3);
+    --font-display: 'Cormorant Garamond', serif;
+    --font-body: 'Libre Baskerville', serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  html, body {
+    width: 1600px;
+    height: 900px;
+    overflow: hidden;
+    background: var(--bg);
+  }
+
+  .section {
+    width: 1600px;
+    height: 900px;
+    background: var(--bg);
+    border-top: 1px solid var(--gold);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Subtle background texture — very faint vertical hatching */
+  .section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 79px,
+        rgba(183,140,78,0.03) 79px,
+        rgba(183,140,78,0.03) 80px
+      );
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Faint radial warmth from lower-left */
+  .section::after {
+    content: '';
+    position: absolute;
+    bottom: -120px;
+    left: -80px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(ellipse at center, rgba(74,124,89,0.07) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* ─── Inner layout ─── */
+  .inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+    padding: 0 96px;
+  }
+
+  /* ─── LEFT LEDE ─── */
+  .lede {
+    width: 280px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 56px;
+    border-right: 1px solid var(--green-border);
+    gap: 0;
+  }
+
+  .lede-label {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 28px;
+    opacity: 0.9;
+  }
+
+  .lede-heading {
+    font-family: var(--font-display);
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 1.18;
+    color: var(--parchment);
+    margin-bottom: 24px;
+    letter-spacing: -0.01em;
+  }
+
+  .lede-heading em {
+    font-style: italic;
+    color: var(--gold);
+    font-weight: 300;
+  }
+
+  .lede-body {
+    font-family: var(--font-body);
+    font-size: 12.5px;
+    line-height: 1.75;
+    color: var(--parchment-dim);
+    font-weight: 400;
+  }
+
+  /* Decorative index mark below body */
+  .lede-ornament {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .lede-ornament-line {
+    height: 1px;
+    width: 32px;
+    background: var(--gold-dim);
+  }
+
+  .lede-ornament-text {
+    font-family: var(--font-mono);
+    font-size: 8px;
+    letter-spacing: 0.15em;
+    color: var(--parchment-faint);
+    text-transform: uppercase;
+  }
+
+  /* ─── RIGHT FEATURE LIST ─── */
+  .feature-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 72px;
+    padding-right: 0;
+  }
+
+  /* Top divider */
+  .feature-list-header {
+    display: grid;
+    grid-template-columns: 40px 1fr auto;
+    gap: 0 28px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--gold-border);
+    margin-bottom: 0;
+  }
+
+  .feature-list-header-label {
+    font-family: var(--font-mono);
+    font-size: 8px;
+    letter-spacing: 0.18em;
+    color: var(--parchment-faint);
+    text-transform: uppercase;
+    padding-left: 4px;
+  }
+
+  .feature-list-header-label.center {
+    grid-column: 2;
+  }
+
+  /* Each row */
+  .feature-row {
+    display: grid;
+    grid-template-columns: 40px 1fr auto;
+    gap: 0 28px;
+    align-items: center;
+    padding: 18px 20px 18px 0;
+    border-bottom: 1px solid var(--gold-border);
+    cursor: default;
+    transition: background 0.2s ease;
+    border-radius: 2px;
+    position: relative;
+  }
+
+  .feature-row.active {
+    background: var(--green-active);
+    padding-left: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-right: 20px;
+  }
+
+  .feature-row.active .feature-arrow {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* Number */
+  .feature-num {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 400;
+    color: var(--gold);
+    letter-spacing: 0.06em;
+    padding-top: 2px;
+    align-self: start;
+  }
+
+  /* Middle: name + description */
+  .feature-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .feature-name {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--parchment);
+    letter-spacing: 0.01em;
+    line-height: 1.2;
+  }
+
+  .feature-row.active .feature-name {
+    color: #e8e0d0;
+  }
+
+  .feature-desc {
+    font-family: var(--font-body);
+    font-size: 12px;
+    line-height: 1.65;
+    color: var(--parchment-dim);
+    font-weight: 400;
+    max-width: 680px;
+  }
+
+  /* Arrow */
+  .feature-arrow {
+    font-family: var(--font-mono);
+    font-size: 16px;
+    color: var(--gold);
+    opacity: 0;
+    transform: translateX(-6px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    align-self: center;
+    line-height: 1;
+  }
+
+  /* Non-active rows: arrow subtly visible to imply interactivity */
+  .feature-row:not(.active) .feature-arrow {
+    opacity: 0.12;
+    transform: translateX(0);
+  }
+
+  /* ─── Section annotation / corner mark ─── */
+  .corner-mark {
+    position: absolute;
+    bottom: 36px;
+    right: 96px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+    z-index: 2;
+  }
+
+  .corner-mark-line {
+    height: 1px;
+    width: 48px;
+    background: var(--gold-border);
+  }
+
+  .corner-mark-text {
+    font-family: var(--font-mono);
+    font-size: 8px;
+    letter-spacing: 0.16em;
+    color: var(--parchment-faint);
+    text-transform: uppercase;
+  }
+
+  /* Section number top-right */
+  .section-index {
+    position: absolute;
+    top: 28px;
+    right: 96px;
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    color: var(--parchment-faint);
+    text-transform: uppercase;
+    z-index: 2;
+  }
+
+  /* Top-left "YC INTELLIGENCE" wordmark */
+  .wordmark {
+    position: absolute;
+    top: 28px;
+    left: 96px;
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.22em;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    z-index: 2;
+  }
+
+  /* Vertical side rail — archive note */
+  .side-rail {
+    position: absolute;
+    right: 96px;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    transform-origin: center center;
+    font-family: var(--font-mono);
+    font-size: 7.5px;
+    letter-spacing: 0.25em;
+    color: rgba(183,140,78,0.2);
+    text-transform: uppercase;
+    white-space: nowrap;
+    z-index: 2;
+  }
+</style>
+</head>
+<body>
+<div class="section">
+
+  <!-- Top navigation marks -->
+  <div class="wordmark">YC Intelligence / The Specimen Vault</div>
+  <div class="section-index">04 — 07</div>
+
+  <!-- Vertical rail annotation -->
+  <div class="side-rail">Specimen Catalogue · Section IV · Intelligence Architecture</div>
+
+  <div class="inner">
+
+    <!-- LEFT LEDE -->
+    <div class="lede">
+      <div class="lede-label">Intelligence Modules</div>
+      <h2 class="lede-heading">Six lenses on the <em>YC ecosystem.</em></h2>
+      <p class="lede-body">Each module is a standalone lens — run individually or combine into a full intelligence pipeline.</p>
+      <div class="lede-ornament">
+        <div class="lede-ornament-line"></div>
+        <span class="lede-ornament-text">Modular · Combinable</span>
+      </div>
+    </div>
+
+    <!-- RIGHT FEATURE LIST -->
+    <div class="feature-list">
+
+      <!-- Column header -->
+      <div class="feature-list-header">
+        <span class="feature-list-header-label"></span>
+        <span class="feature-list-header-label center">Module</span>
+        <span class="feature-list-header-label"></span>
+      </div>
+
+      <!-- Row 01 — active/hovered -->
+      <div class="feature-row active">
+        <span class="feature-num">01</span>
+        <div class="feature-content">
+          <span class="feature-name">Startup Directory</span>
+          <span class="feature-desc">Search and filter 5,200+ YC companies by batch, industry, team size, and hiring status.</span>
+        </div>
+        <span class="feature-arrow">→</span>
+      </div>
+
+      <!-- Row 02 -->
+      <div class="feature-row">
+        <span class="feature-num">02</span>
+        <div class="feature-content">
+          <span class="feature-name">Funding Intelligence</span>
+          <span class="feature-desc">Track round history, annual volumes, and industry capital maps.</span>
+        </div>
+        <span class="feature-arrow">→</span>
+      </div>
+
+      <!-- Row 03 -->
+      <div class="feature-row">
+        <span class="feature-num">03</span>
+        <div class="feature-content">
+          <span class="feature-name">Hiring Trends</span>
+          <span class="feature-desc">Monthly open-role aggregates. Spot companies ramping before it becomes public signal.</span>
+        </div>
+        <span class="feature-arrow">→</span>
+      </div>
+
+      <!-- Row 04 -->
+      <div class="feature-row">
+        <span class="feature-num">04</span>
+        <div class="feature-content">
+          <span class="feature-name">Founder Profiles</span>
+          <span class="feature-desc">Background extraction, pedigree analysis, and prior employer mapping.</span>
+        </div>
+        <span class="feature-arrow">→</span>
+      </div>
+
+      <!-- Row 05 -->
+      <div class="feature-row">
+        <span class="feature-num">05</span>
+        <div class="feature-content">
+          <span class="feature-name">LLM Profiling</span>
+          <span class="feature-desc">Optional OpenAI integration generates investor-ready company summaries.</span>
+        </div>
+        <span class="feature-arrow">→</span>
+      </div>
+
+      <!-- Row 06 -->
+      <div class="feature-row" style="border-bottom: 1px solid var(--gold-border);">
+        <span class="feature-num">06</span>
+        <div class="feature-content">
+          <span class="feature-name">Pipeline Monitor</span>
+          <span class="feature-desc">Track scrape runs, import progress, and pipeline status.</span>
+        </div>
+        <span class="feature-arrow">→</span>
+      </div>
+
+    </div><!-- /feature-list -->
+
+  </div><!-- /inner -->
+
+  <!-- Bottom corner mark -->
+  <div class="corner-mark">
+    <div class="corner-mark-line"></div>
+    <span class="corner-mark-text">6 modules · Full pipeline</span>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1600">
+<title>YC Intelligence — Section 07 · Footer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --void:        #070e09;
+    --gold:        #b78c4e;
+    --parchment:   #e8e0d0;
+    --dimmed:      rgba(232, 224, 208, 0.55);
+    --ghost:       rgba(232, 224, 208, 0.18);
+    --border:      rgba(183, 140, 78, 0.18);
+    --border-gold: rgba(183, 140, 78, 1);
+  }
+
+  html, body {
+    width: 1600px;
+    height: 280px;
+    overflow: hidden;
+    background: var(--void);
+  }
+
+  footer {
+    width: 1600px;
+    height: 280px;
+    background: var(--void);
+    border-top: 1px solid var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 80px;
+    position: relative;
+  }
+
+  /* ── LEFT: Brand mark ── */
+  .brand {
+    display: flex;
+    align-items: baseline;
+    gap: 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 17px;
+    letter-spacing: 0.02em;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .brand-yc {
+    color: var(--parchment);
+  }
+
+  .brand-intel {
+    color: var(--gold);
+  }
+
+  /* ── CENTER: Attribution ── */
+  .attribution {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 300;
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ghost);
+    white-space: nowrap;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* ── RIGHT: Nav links ── */
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .nav-link {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 300;
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--dimmed);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+  }
+
+  .nav-link:hover {
+    color: var(--gold);
+  }
+</style>
+</head>
+<body>
+<footer>
+  <div class="brand">
+    <span class="brand-yc">YC&nbsp;</span><span class="brand-intel">Intel</span>
+  </div>
+
+  <span class="attribution">Open-Source YC Intelligence &middot; MIT</span>
+
+  <nav class="nav-links">
+    <a class="nav-link" href="#">Dashboard</a>
+    <a class="nav-link" href="#">GitHub</a>
+    <a class="nav-link" href="#">Designs</a>
+  </nav>
+</footer>
+</body>
+</html>

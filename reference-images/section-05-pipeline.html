@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1600">
+<title>YC Intelligence — Section 05: The Methodology</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  :root {
+    --void: #070e09;
+    --gold: #b78c4e;
+    --gold-dim: rgba(183, 140, 78, 0.55);
+    --gold-border: rgba(183, 140, 78, 0.18);
+    --gold-border-strong: rgba(183, 140, 78, 0.35);
+    --forest: #4a7c59;
+    --parchment: #e8e0d0;
+    --parchment-dim: rgba(232, 224, 208, 0.55);
+    --parchment-muted: rgba(232, 224, 208, 0.35);
+    --card-bg: #142018;
+    --card-bg-deep: #0e1a11;
+    --mono: 'JetBrains Mono', monospace;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --body: 'Libre Baskerville', Georgia, serif;
+  }
+
+  html, body {
+    width: 1600px;
+    height: 900px;
+    overflow: hidden;
+    background: var(--void);
+  }
+
+  .section {
+    width: 1600px;
+    height: 900px;
+    background: var(--void);
+    border-top: 1px solid var(--gold);
+    display: flex;
+    align-items: stretch;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Subtle background texture — very faint cross-hatch grid */
+  .section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(183,140,78,0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(183,140,78,0.025) 1px, transparent 1px);
+    background-size: 80px 80px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Vertical center divider */
+  .section::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 60px;
+    bottom: 60px;
+    width: 1px;
+    background: var(--gold-border);
+    z-index: 1;
+  }
+
+  /* ── LEFT COLUMN ── */
+  .left {
+    width: 50%;
+    padding: 80px 72px 60px 96px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  .section-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section-label::before {
+    content: '05';
+    font-family: var(--mono);
+    font-size: 9px;
+    color: var(--gold-dim);
+    letter-spacing: 0.1em;
+  }
+
+  .section-label::after {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 1px;
+    background: var(--gold-dim);
+  }
+
+  .heading {
+    font-family: var(--serif);
+    font-size: 48px;
+    font-weight: 400;
+    color: var(--parchment);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin-bottom: 18px;
+  }
+
+  .heading em {
+    font-style: italic;
+    color: var(--gold);
+    font-weight: 300;
+  }
+
+  .body-text {
+    font-family: var(--body);
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--parchment-dim);
+    line-height: 1.7;
+    max-width: 430px;
+    margin-bottom: 28px;
+  }
+
+  /* CODE BLOCK */
+  .code-block {
+    background: var(--card-bg);
+    border: 1px solid var(--gold);
+    border-radius: 2px;
+    padding: 22px 24px;
+    position: relative;
+    max-width: 500px;
+  }
+
+  .code-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, var(--gold) 0%, rgba(183,140,78,0.3) 100%);
+  }
+
+  /* Terminal dots */
+  .code-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--gold-border);
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+
+  .dot-red   { background: #4a2020; border: 1px solid rgba(200,80,80,0.3); }
+  .dot-amber { background: #3a2c10; border: 1px solid rgba(200,160,60,0.3); }
+  .dot-green { background: #1a3020; border: 1px solid rgba(60,180,80,0.3); }
+
+  .code-header-label {
+    font-family: var(--mono);
+    font-size: 9px;
+    color: var(--parchment-muted);
+    letter-spacing: 0.15em;
+    margin-left: auto;
+    text-transform: uppercase;
+  }
+
+  .code-line {
+    font-family: var(--mono);
+    font-size: 12px;
+    line-height: 1.9;
+    white-space: nowrap;
+  }
+
+  .code-comment {
+    color: var(--gold-dim);
+  }
+
+  .code-cmd {
+    color: var(--parchment);
+  }
+
+  .code-prompt {
+    color: var(--forest);
+    margin-right: 8px;
+    opacity: 0.7;
+  }
+
+  .code-gap {
+    display: block;
+    height: 8px;
+  }
+
+  /* ── RIGHT COLUMN ── */
+  .right {
+    width: 50%;
+    padding: 80px 96px 60px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .pipeline-label {
+    font-family: var(--mono);
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .pipeline-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--gold-border);
+  }
+
+  /* STEP */
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .step {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    position: relative;
+  }
+
+  /* Left rail: box + connector line */
+  .step-rail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .step-box {
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--gold);
+    background: var(--card-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  .step-box::before {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    border: 1px solid var(--gold-border);
+  }
+
+  .step-num {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--gold);
+    letter-spacing: 0.05em;
+  }
+
+  .step-connector {
+    width: 1px;
+    flex: 1;
+    background: var(--gold-border-strong);
+    min-height: 28px;
+  }
+
+  /* Last step: no connector */
+  .step:last-child .step-connector {
+    display: none;
+  }
+
+  .step-content {
+    padding-top: 5px;
+    padding-bottom: 24px;
+  }
+
+  .step:last-child .step-content {
+    padding-bottom: 0;
+  }
+
+  .step-name {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .step-name::after {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 1px;
+    background: var(--gold-border-strong);
+    vertical-align: middle;
+  }
+
+  .step-desc {
+    font-family: var(--body);
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--parchment-dim);
+    line-height: 1.65;
+    max-width: 370px;
+  }
+
+  /* Decorative: right side bottom annotation */
+  .pipeline-footer {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .pipeline-footer-line {
+    flex: 1;
+    height: 1px;
+    background: var(--gold-border);
+  }
+
+  .pipeline-footer-note {
+    font-family: var(--mono);
+    font-size: 9px;
+    color: var(--parchment-muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  /* Ambient right-side glow — very subtle */
+  .glow-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 900px;
+    background: radial-gradient(ellipse at 90% 50%, rgba(74,124,89,0.06) 0%, transparent 65%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Ambient left glow */
+  .glow-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 900px;
+    background: radial-gradient(ellipse at 10% 60%, rgba(183,140,78,0.05) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+</style>
+</head>
+<body>
+<div class="section">
+  <div class="glow-left"></div>
+  <div class="glow-right"></div>
+
+  <!-- LEFT COLUMN -->
+  <div class="left">
+    <div class="section-label">The Methodology</div>
+
+    <h2 class="heading">
+      From raw directory to<br>
+      <em>analyst-ready intelligence.</em>
+    </h2>
+
+    <p class="body-text">
+      A four-stage Python pipeline transforms the live YC Algolia directory into structured, searchable company intelligence. Each stage is modular — swap in your own NLP model, skip the LLM step, or run it headless in CI.
+    </p>
+
+    <!-- CODE BLOCK -->
+    <div class="code-block">
+      <div class="code-header">
+        <div class="dot dot-red"></div>
+        <div class="dot dot-amber"></div>
+        <div class="dot dot-green"></div>
+        <span class="code-header-label">bash · zsh</span>
+      </div>
+
+      <div class="code-line code-comment"># instant demo</div>
+      <div class="code-line code-cmd">
+        <span class="code-prompt">$</span>cd apps/web &amp;&amp; npm run db:setup &amp;&amp; npm run dev
+      </div>
+
+      <span class="code-gap"></span>
+
+      <div class="code-line code-comment"># live pipeline</div>
+      <div class="code-line code-cmd">
+        <span class="code-prompt">$</span>npm run pipeline:import
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT COLUMN -->
+  <div class="right">
+    <div class="pipeline-label">Pipeline — 4 stages</div>
+
+    <div class="steps">
+
+      <!-- Step 01 -->
+      <div class="step">
+        <div class="step-rail">
+          <div class="step-box"><span class="step-num">01</span></div>
+          <div class="step-connector"></div>
+        </div>
+        <div class="step-content">
+          <div class="step-name">SCRAPE_YC.PY</div>
+          <div class="step-desc">Pulls live YC directory via Algolia API. Captures batch, industry, team size, hiring status.</div>
+        </div>
+      </div>
+
+      <!-- Step 02 -->
+      <div class="step">
+        <div class="step-rail">
+          <div class="step-box"><span class="step-num">02</span></div>
+          <div class="step-connector"></div>
+        </div>
+        <div class="step-content">
+          <div class="step-name">EXTRACT_ENTITIES.PY</div>
+          <div class="step-desc">Regex and optional spaCy NER extracts funding rounds, founders, and company entities.</div>
+        </div>
+      </div>
+
+      <!-- Step 03 -->
+      <div class="step">
+        <div class="step-rail">
+          <div class="step-box"><span class="step-num">03</span></div>
+          <div class="step-connector"></div>
+        </div>
+        <div class="step-content">
+          <div class="step-name">SUMMARIZE.PY</div>
+          <div class="step-desc">OpenAI (optional) generates investor-ready profiles from raw extracted data.</div>
+        </div>
+      </div>
+
+      <!-- Step 04 -->
+      <div class="step">
+        <div class="step-rail">
+          <div class="step-box"><span class="step-num">04</span></div>
+          <div class="step-connector"></div>
+        </div>
+        <div class="step-content">
+          <div class="step-name">IMPORT_TO_DB.PY</div>
+          <div class="step-desc">Loads structured JSON into SQLite via Drizzle ORM, ready for the dashboard.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="pipeline-footer">
+      <div class="pipeline-footer-line"></div>
+      <div class="pipeline-footer-note">modular · headless · ci-ready</div>
+      <div class="pipeline-footer-line"></div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
