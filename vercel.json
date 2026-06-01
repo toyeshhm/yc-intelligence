@@ -1,7 +1,1 @@
-{
-  "projectSettings": {
-    "rootDirectory": "apps/web",
-    "framework": "nextjs",
-    "outputDirectory": ".next"
-  }
-}
+{}
