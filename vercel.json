@@ -1,3 +1,7 @@
 {
-  "buildCommand": "npm run build"
+  "version": 2,
+  "projectSettings": {
+    "framework": "nextjs",
+    "rootDirectory": "apps/web"
+  }
 }
