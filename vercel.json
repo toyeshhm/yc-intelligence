@@ -4,5 +4,6 @@
     "framework": "nextjs",
     "rootDirectory": "apps/web"
   },
-  "buildCommand": "npx next build"
+  "buildCommand": "npm install && npm run build",
+  "installCommand": "npm install"
 }
