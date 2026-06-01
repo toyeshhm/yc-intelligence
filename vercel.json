@@ -1,6 +1,6 @@
 {
   "projectSettings": {
-    "rootDirectory": "apps/web",
-    "outputDirectory": ".next"
-  }
+    "rootDirectory": "apps/web"
+  },
+  "outputDirectory": ".next"
 }
