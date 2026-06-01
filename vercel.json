@@ -3,5 +3,6 @@
   "projectSettings": {
     "framework": "nextjs",
     "rootDirectory": "apps/web"
-  }
+  },
+  "buildCommand": "npx next build"
 }
