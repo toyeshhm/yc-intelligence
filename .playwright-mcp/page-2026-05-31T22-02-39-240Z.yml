@@ -1,0 +1,364 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation "Site navigation" [ref=e3]:
+      - generic [ref=e4]:
+        - link "YC Intel" [ref=e5] [cursor=pointer]:
+          - /url: /
+        - generic [ref=e6]:
+          - link "Archive" [ref=e7] [cursor=pointer]:
+            - /url: /dashboard
+          - link "Funding" [ref=e8] [cursor=pointer]:
+            - /url: /dashboard/funding
+          - link "Founders" [ref=e9] [cursor=pointer]:
+            - /url: /dashboard/founders
+          - link "Signals" [ref=e10] [cursor=pointer]:
+            - /url: /dashboard/hiring
+          - link "GitHub" [ref=e11] [cursor=pointer]:
+            - /url: https://github.com/search?q=yc-intelligence&type=repositories
+        - generic [ref=e12]:
+          - generic [ref=e15]: 5,247 specimens indexed
+          - link "Open Archive" [ref=e16] [cursor=pointer]:
+            - /url: /dashboard
+    - generic [ref=e17]:
+      - generic [ref=e18]:
+        - generic [ref=e19]:
+          - generic [ref=e20]:
+            - generic [ref=e21]: Specimen Catalogue
+            - generic [ref=e23]: Cat. No. YC-5247 · Est. W05
+          - heading "Every YC startup, catalogued. Open. Free. Complete." [level=1] [ref=e24]:
+            - generic [ref=e25]: Every YC startup,
+            - generic [ref=e26]: catalogued.
+            - generic [ref=e27]: Open. Free. Complete.
+          - paragraph [ref=e29]: Automated pipelines collect, extract, and classify 5,200+ YC companies. Funding rounds, hiring signals, founder backgrounds, and competitive positioning.
+          - generic [ref=e30]:
+            - link "Open the Archive →" [ref=e31] [cursor=pointer]:
+              - /url: /dashboard
+            - link "View Source" [ref=e32] [cursor=pointer]:
+              - /url: https://github.com/search?q=yc-intelligence&type=repositories
+        - generic [ref=e35]:
+          - generic [ref=e36]:
+            - generic [ref=e37]:
+              - generic [ref=e38]: Top Specimens · W25 Batch
+              - generic [ref=e39]: Portfolio Overview
+            - generic [ref=e42]: Live feed
+          - generic [ref=e43]:
+            - generic [ref=e44]:
+              - generic [ref=e45]: Stripe
+              - generic [ref=e46]: W10
+              - generic [ref=e49]: $95B
+            - generic [ref=e50]:
+              - generic [ref=e51]: Airbnb
+              - generic [ref=e52]: W09
+              - generic [ref=e55]: $75B
+            - generic [ref=e56]:
+              - generic [ref=e57]: OpenAI
+              - generic [ref=e58]: S19
+              - generic [ref=e61]: $11B
+            - generic [ref=e62]:
+              - generic [ref=e63]: Zapier
+              - generic [ref=e64]: W12
+              - generic [ref=e67]: $1.4B
+          - generic [ref=e68]:
+            - generic [ref=e69]:
+              - generic [ref=e70]: 12,400
+              - generic [ref=e71]: Open roles tracked
+            - generic [ref=e72]:
+              - generic [ref=e73]: $4.2B
+              - generic [ref=e74]: Capital mapped
+      - generic [ref=e76]:
+        - generic [ref=e77]:
+          - generic [ref=e78]: Stripe
+          - generic [ref=e79]: ·
+          - generic [ref=e80]: $95B Series I
+          - generic [ref=e81]: ·
+          - generic [ref=e82]: Fintech
+        - generic [ref=e83]:
+          - generic [ref=e84]: Airbnb
+          - generic [ref=e85]: ·
+          - generic [ref=e86]: IPO · $75B
+          - generic [ref=e87]: ·
+          - generic [ref=e88]: Travel
+        - generic [ref=e89]:
+          - generic [ref=e90]: OpenAI
+          - generic [ref=e91]: ·
+          - generic [ref=e92]: Series E · $11B
+          - generic [ref=e93]: ·
+          - generic [ref=e94]: AI/ML
+        - generic [ref=e95]:
+          - generic [ref=e96]: Zapier
+          - generic [ref=e97]: ·
+          - generic [ref=e98]: Bootstrapped · $1.4B
+          - generic [ref=e99]: ·
+          - generic [ref=e100]: Automation
+        - generic [ref=e101]:
+          - generic [ref=e102]: Ginkgo Bioworks
+          - generic [ref=e103]: ·
+          - generic [ref=e104]: IPO · $2.8B
+          - generic [ref=e105]: ·
+          - generic [ref=e106]: Biotech
+        - generic [ref=e107]:
+          - generic [ref=e108]: Instacart
+          - generic [ref=e109]: ·
+          - generic [ref=e110]: IPO · $9.9B
+          - generic [ref=e111]: ·
+          - generic [ref=e112]: Ecommerce
+        - generic [ref=e113]:
+          - generic [ref=e114]: DoorDash
+          - generic [ref=e115]: ·
+          - generic [ref=e116]: IPO · $39B
+          - generic [ref=e117]: ·
+          - generic [ref=e118]: Logistics
+        - generic [ref=e119]:
+          - generic [ref=e120]: Coinbase
+          - generic [ref=e121]: ·
+          - generic [ref=e122]: IPO · $86B
+          - generic [ref=e123]: ·
+          - generic [ref=e124]: Crypto
+        - generic [ref=e125]:
+          - generic [ref=e126]: Stripe
+          - generic [ref=e127]: ·
+          - generic [ref=e128]: $95B Series I
+          - generic [ref=e129]: ·
+          - generic [ref=e130]: Fintech
+        - generic [ref=e131]:
+          - generic [ref=e132]: Airbnb
+          - generic [ref=e133]: ·
+          - generic [ref=e134]: IPO · $75B
+          - generic [ref=e135]: ·
+          - generic [ref=e136]: Travel
+        - generic [ref=e137]:
+          - generic [ref=e138]: OpenAI
+          - generic [ref=e139]: ·
+          - generic [ref=e140]: Series E · $11B
+          - generic [ref=e141]: ·
+          - generic [ref=e142]: AI/ML
+        - generic [ref=e143]:
+          - generic [ref=e144]: Zapier
+          - generic [ref=e145]: ·
+          - generic [ref=e146]: Bootstrapped · $1.4B
+          - generic [ref=e147]: ·
+          - generic [ref=e148]: Automation
+        - generic [ref=e149]:
+          - generic [ref=e150]: Ginkgo Bioworks
+          - generic [ref=e151]: ·
+          - generic [ref=e152]: IPO · $2.8B
+          - generic [ref=e153]: ·
+          - generic [ref=e154]: Biotech
+        - generic [ref=e155]:
+          - generic [ref=e156]: Instacart
+          - generic [ref=e157]: ·
+          - generic [ref=e158]: IPO · $9.9B
+          - generic [ref=e159]: ·
+          - generic [ref=e160]: Ecommerce
+        - generic [ref=e161]:
+          - generic [ref=e162]: DoorDash
+          - generic [ref=e163]: ·
+          - generic [ref=e164]: IPO · $39B
+          - generic [ref=e165]: ·
+          - generic [ref=e166]: Logistics
+        - generic [ref=e167]:
+          - generic [ref=e168]: Coinbase
+          - generic [ref=e169]: ·
+          - generic [ref=e170]: IPO · $86B
+          - generic [ref=e171]: ·
+          - generic [ref=e172]: Crypto
+    - generic [ref=e174]:
+      - generic [ref=e176]:
+        - generic [ref=e177]: "01"
+        - generic [ref=e178]: Total Indexed
+        - generic [ref=e179]: 5,247
+        - text: companies, all batches
+      - generic [ref=e181]:
+        - generic [ref=e182]: "02"
+        - generic [ref=e183]: Capital Tracked
+        - generic [ref=e184]:
+          - text: $4.2
+          - superscript [ref=e185]: B
+        - text: funding rounds mapped
+      - generic [ref=e187]:
+        - generic [ref=e188]: "03"
+        - generic [ref=e189]: Open Roles
+        - generic [ref=e190]: 12,400
+        - text: real-time hiring signals
+      - generic [ref=e192]:
+        - generic [ref=e193]: "04"
+        - generic [ref=e194]: Founders Mapped
+        - generic [ref=e195]: "847"
+        - text: background profiles
+    - generic [ref=e197]:
+      - generic [ref=e198]:
+        - generic [ref=e200]:
+          - generic [ref=e201]: The Vault · 5,247 specimens
+          - heading "The full YC archive, classified." [level=2] [ref=e202]:
+            - text: The full YC archive,
+            - emphasis [ref=e203]: classified.
+        - generic [ref=e205]:
+          - paragraph [ref=e206]: Search, filter, and study every YC company by batch, industry, funding status, team size, and hiring signals. Each entry is a living record.
+          - link "Browse Archive →" [ref=e207] [cursor=pointer]:
+            - /url: /dashboard
+      - generic [ref=e208]:
+        - generic [ref=e209] [cursor=pointer]:
+          - generic [ref=e211]: SPECIMEN · W10 · FINTECH
+          - generic [ref=e212]: Stripe
+          - generic [ref=e213]: Payments infrastructure for the internet. Founded 2009, public infrastructure at global scale.
+          - generic [ref=e214]: Series I · $95B valuation
+          - generic [ref=e215]:
+            - generic [ref=e216]: Fintech
+            - generic [ref=e217]: B2B
+            - generic [ref=e218]: Hiring
+          - generic: "01"
+        - generic [ref=e219] [cursor=pointer]:
+          - generic [ref=e221]: SPECIMEN · W09 · TRAVEL
+          - generic [ref=e222]: Airbnb
+          - generic [ref=e223]: Marketplace for short-term lodging and experiences.
+          - generic [ref=e224]: IPO · $75B
+          - generic [ref=e225]:
+            - generic [ref=e226]: Marketplace
+            - generic [ref=e227]: Travel
+        - generic [ref=e228] [cursor=pointer]:
+          - generic [ref=e230]: SPECIMEN · S19 · AI/ML
+          - generic [ref=e231]: OpenAI
+          - generic [ref=e232]: AI research and deployment at scale.
+          - generic [ref=e233]: Series E · $11B
+          - generic [ref=e234]:
+            - generic [ref=e235]: AI/ML
+            - generic [ref=e236]: Research
+        - generic [ref=e237] [cursor=pointer]:
+          - generic [ref=e239]: SPECIMEN · W12 · AUTOMATION
+          - generic [ref=e240]: Zapier
+          - generic [ref=e241]: Workflow automation for every team and stack.
+          - generic [ref=e242]: Bootstrapped · $1.4B
+          - generic [ref=e243]:
+            - generic [ref=e244]: SaaS
+            - generic [ref=e245]: Automation
+        - generic [ref=e246] [cursor=pointer]:
+          - generic [ref=e248]: SPECIMEN · W11 · BIOTECH
+          - generic [ref=e249]: Ginkgo Bioworks
+          - generic [ref=e250]: Cell programming platform for engineered biology.
+          - generic [ref=e251]: IPO · $2.8B
+          - generic [ref=e253]: Biotech
+    - generic [ref=e255]:
+      - generic [ref=e257]:
+        - generic [ref=e258]: Intelligence Modules
+        - heading "Six lenses on the YC ecosystem." [level=2] [ref=e259]:
+          - text: Six lenses on the
+          - emphasis [ref=e260]: YC ecosystem.
+        - paragraph [ref=e261]: Each module is a standalone lens. Run individually or combine into a full intelligence pipeline.
+      - generic [ref=e262]:
+        - generic [ref=e264]:
+          - generic [ref=e265]: "01"
+          - generic [ref=e266]:
+            - generic [ref=e267]: Startup Directory
+            - generic [ref=e268]: Search and filter 5,200+ YC companies by batch, industry, team size, and hiring status. Full-text search backed by SQLite.
+          - generic [ref=e269]: →
+        - generic [ref=e271]:
+          - generic [ref=e272]: "02"
+          - generic [ref=e273]:
+            - generic [ref=e274]: Funding Intelligence
+            - generic [ref=e275]: Track round history, annual volumes, and industry capital maps. See where the money flows across every batch.
+          - generic [ref=e276]: →
+        - generic [ref=e278]:
+          - generic [ref=e279]: "03"
+          - generic [ref=e280]:
+            - generic [ref=e281]: Hiring Trends
+            - generic [ref=e282]: Monthly open-role aggregates with industry heatmaps. Spot companies ramping before it becomes public signal.
+          - generic [ref=e283]: →
+        - generic [ref=e285]:
+          - generic [ref=e286]: "04"
+          - generic [ref=e287]:
+            - generic [ref=e288]: Founder Profiles
+            - generic [ref=e289]: Background extraction, pedigree analysis, and prior employer mapping across every tracked founder.
+          - generic [ref=e290]: →
+        - generic [ref=e292]:
+          - generic [ref=e293]: "05"
+          - generic [ref=e294]:
+            - generic [ref=e295]: LLM Profiling
+            - generic [ref=e296]: Optional OpenAI integration generates investor-ready company summaries from raw extracted data.
+          - generic [ref=e297]: →
+        - generic [ref=e299]:
+          - generic [ref=e300]: "06"
+          - generic [ref=e301]:
+            - generic [ref=e302]: Pipeline Monitor
+            - generic [ref=e303]: Track scrape runs, import progress, and pipeline status. Full observability into the data machinery.
+          - generic [ref=e304]: →
+    - generic [ref=e306]:
+      - generic [ref=e308]:
+        - generic [ref=e309]: The Methodology
+        - heading "From raw directory to analyst-ready intelligence." [level=2] [ref=e310]:
+          - text: From raw directory to
+          - emphasis [ref=e311]: analyst-ready intelligence.
+        - paragraph [ref=e312]:
+          - text: Four stages. Each is a standalone Python script you can run individually or chain together with
+          - code [ref=e313]: run_pipeline.py
+          - text: .
+        - generic [ref=e314]:
+          - generic [ref=e315]: "# instant demo"
+          - generic [ref=e316]: cd apps/web && npm run db:setup && npm run dev
+          - generic [ref=e318]: "# live pipeline"
+          - generic [ref=e319]: npm run pipeline:import
+      - generic [ref=e320]:
+        - generic [ref=e322]:
+          - generic [ref=e324]: "01"
+          - generic [ref=e326]:
+            - generic [ref=e327]: scrape_yc.py
+            - generic [ref=e328]: Pulls live YC directory via Algolia API. Captures batch, industry, team size, and hiring status.
+        - generic [ref=e330]:
+          - generic [ref=e332]: "02"
+          - generic [ref=e334]:
+            - generic [ref=e335]: extract_entities.py
+            - generic [ref=e336]: Regex and optional spaCy NER extracts funding rounds, founders, and company entities.
+        - generic [ref=e338]:
+          - generic [ref=e340]: "03"
+          - generic [ref=e342]:
+            - generic [ref=e343]: summarize.py
+            - generic [ref=e344]: OpenAI (optional) generates investor-ready profiles from raw extracted data.
+        - generic [ref=e346]:
+          - generic [ref=e348]: "04"
+          - generic [ref=e349]:
+            - generic [ref=e350]: import_to_db.py
+            - generic [ref=e351]: Loads structured JSON into SQLite via Drizzle ORM, ready for the dashboard.
+    - generic [ref=e353]:
+      - generic [ref=e355]:
+        - generic [ref=e356]: Open Source · MIT Licensed
+        - heading "The archive is open. Fork it." [level=2] [ref=e357]:
+          - emphasis [ref=e358]: The archive
+          - text: is open. Fork it.
+        - paragraph [ref=e359]: No vendor lock-in, no required API keys. Bring your own data pipeline or use the seed data to get started in under a minute.
+        - generic [ref=e360]:
+          - link "Open Dashboard →" [ref=e361] [cursor=pointer]:
+            - /url: /dashboard
+          - link "View on GitHub" [ref=e362] [cursor=pointer]:
+            - /url: https://github.com/search?q=yc-intelligence&type=repositories
+      - generic [ref=e364]:
+        - generic [ref=e365]: Tech Stack
+        - generic [ref=e366]:
+          - generic [ref=e367]:
+            - generic [ref=e369]: Next.js 16
+            - generic [ref=e370]: React 19
+          - generic [ref=e371]:
+            - generic [ref=e373]: Tailwind CSS 4
+            - generic [ref=e374]: No UI kit
+          - generic [ref=e375]:
+            - generic [ref=e377]: SQLite + Drizzle
+            - generic [ref=e378]: Lightweight
+          - generic [ref=e379]:
+            - generic [ref=e381]: Python pipeline
+            - generic [ref=e382]: httpx + spaCy
+          - generic [ref=e383]:
+            - generic [ref=e385]: OpenAI (optional)
+            - generic [ref=e386]: gpt-4o-mini
+    - contentinfo [ref=e387]:
+      - generic [ref=e388]:
+        - link "YC Intel" [ref=e389] [cursor=pointer]:
+          - /url: /
+        - generic [ref=e390]: Open-source YC intelligence · MIT
+        - generic [ref=e391]:
+          - link "Dashboard" [ref=e392] [cursor=pointer]:
+            - /url: /dashboard
+          - link "GitHub" [ref=e393] [cursor=pointer]:
+            - /url: https://github.com/search?q=yc-intelligence&type=repositories
+          - link "Designs" [ref=e394] [cursor=pointer]:
+            - /url: /designs
+  - button "Open Next.js Dev Tools" [ref=e400] [cursor=pointer]:
+    - img [ref=e401]
+  - alert [ref=e404]

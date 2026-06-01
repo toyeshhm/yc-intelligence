@@ -1,0 +1,226 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]: ● LIVE
+    - text: AI-powered interview coaching · Trusted by thousands of job seekers
+    - link "Start free →" [ref=e4] [cursor=pointer]:
+      - /url: /auth
+  - navigation [ref=e5]:
+    - generic [ref=e6]:
+      - link "Prep.AI" [ref=e7] [cursor=pointer]:
+        - /url: /
+        - img [ref=e9]
+        - generic [ref=e11]: Prep.AI
+      - list [ref=e13]:
+        - listitem [ref=e14]:
+          - link "How it works" [ref=e15] [cursor=pointer]:
+            - /url: /#how-it-works
+        - listitem [ref=e16]:
+          - link "Features" [ref=e17] [cursor=pointer]:
+            - /url: /#features
+        - listitem [ref=e18]:
+          - link "Pricing" [ref=e19] [cursor=pointer]:
+            - /url: /upgrade
+      - generic [ref=e20]:
+        - link "Sign in" [ref=e21] [cursor=pointer]:
+          - /url: /auth?tab=login
+        - link "Get started free" [ref=e23] [cursor=pointer]:
+          - /url: /auth
+          - text: Get started free
+          - img [ref=e24]
+      - button "Toggle menu" [ref=e26] [cursor=pointer]
+  - generic [ref=e31]:
+    - generic [ref=e32]:
+      - generic [ref=e35]: AI interview coaching
+      - heading "Walk in confident." [level=1] [ref=e36]:
+        - text: Walk in
+        - text: confident.
+      - generic [ref=e37]:
+        - generic [ref=e38]:
+          - generic [ref=e39]: —
+          - text: Paste your resume and job description
+        - generic [ref=e40]:
+          - generic [ref=e41]: —
+          - text: Get tailored questions matched to the actual role
+        - generic [ref=e42]:
+          - generic [ref=e43]: —
+          - text: Score every answer. Improve fast.
+      - generic [ref=e44]:
+        - link "Start practicing free" [ref=e45] [cursor=pointer]:
+          - /url: /auth
+        - generic [ref=e46]: No card · 2 min setup
+    - generic [ref=e50]:
+      - generic [ref=e51]:
+        - generic [ref=e52]:
+          - generic [ref=e53]: Stripe
+          - generic [ref=e55]: Staff Software Engineer
+        - generic [ref=e56]: 3 / 5
+      - generic [ref=e57]:
+        - generic [ref=e58]: Question
+        - paragraph [ref=e59]: “Walk me through how you'd debug a cascading failure across a distributed payment system under active production load.”
+        - generic [ref=e60]: Your answer
+        - paragraph [ref=e61]:
+          - text: During an incident at my last role, our payment orchestration service started dropping roughly 3% of transactions. First thing I did was isolate which service in the chain was emitting the first error — checked our
+          - strong [ref=e62]: distributed traces in Datadog
+          - text: ", found the auth token refresh service was timing out..."
+        - generic [ref=e63]:
+          - generic [ref=e64]: "8.2"
+          - generic [ref=e65]:
+            - generic [ref=e66]: Score / 10
+            - paragraph [ref=e69]: Strong incident framing. Quantify the business impact.
+            - generic [ref=e70]: STAR structure ✓
+  - generic [ref=e72]:
+    - generic [ref=e73]: Tailored questions·
+    - generic [ref=e74]: Behavioral coaching·
+    - generic [ref=e75]: System design prep·
+    - generic [ref=e76]: Instant scoring·
+    - generic [ref=e77]: Improvement tips·
+    - generic [ref=e78]: STAR framework·
+    - generic [ref=e79]: Role-matched questions·
+    - generic [ref=e80]: Session history·
+    - generic [ref=e81]: Tailored questions·
+    - generic [ref=e82]: Behavioral coaching·
+    - generic [ref=e83]: System design prep·
+    - generic [ref=e84]: Instant scoring·
+    - generic [ref=e85]: Improvement tips·
+    - generic [ref=e86]: STAR framework·
+    - generic [ref=e87]: Role-matched questions·
+    - generic [ref=e88]: Session history
+  - generic [ref=e89]:
+    - generic [ref=e90]:
+      - heading "Three steps to your next offer." [level=2] [ref=e91]:
+        - text: Three steps to
+        - text: your next offer.
+      - paragraph [ref=e92]: No courses. No flashcards. Deliberate practice matched to the actual job.
+    - generic [ref=e93]:
+      - generic [ref=e94]:
+        - generic [ref=e95]: "01"
+        - generic [ref=e96]:
+          - heading "Paste your resume & job description" [level=3] [ref=e97]:
+            - generic [ref=e98]: Paste your resume
+            - text: "& job description"
+          - paragraph [ref=e99]: Drop in both. The AI reads your experience alongside the actual job posting and maps exactly what the interviewer will want to probe.
+        - generic [ref=e100]:
+          - generic [ref=e101]: What you bring
+          - paragraph [ref=e102]: Your resume in any format. The job description from the posting. No templates, no setup.
+      - generic [ref=e103]:
+        - generic [ref=e104]: "02"
+        - generic [ref=e105]:
+          - heading "Answer tailored questions" [level=3] [ref=e106]:
+            - generic [ref=e107]: Answer tailored
+            - text: questions
+          - paragraph [ref=e108]: Behavioral, technical, and situational — questions calibrated to your background and the seniority of the role you're targeting.
+        - generic [ref=e109]:
+          - generic [ref=e110]: Question types
+          - paragraph [ref=e111]: Behavioral drawn from your specific past experience. Technical or system design matched to the role's stack and scope.
+      - generic [ref=e112]:
+        - generic [ref=e113]: "03"
+        - generic [ref=e114]:
+          - heading "Get scored, get better" [level=3] [ref=e115]:
+            - generic [ref=e116]: Get scored,
+            - text: get better
+          - paragraph [ref=e117]: Every answer is scored 1–10 with written feedback. After the session, one sharp improvement tip per answer — specific to what you said.
+        - generic [ref=e118]:
+          - generic [ref=e119]: What you get
+          - paragraph [ref=e120]: A score per answer. Written feedback on what was strong and what to fix. Your overall score saved to session history.
+  - generic [ref=e121]:
+    - generic [ref=e122]:
+      - generic [ref=e123]: Features
+      - heading "Built for people who take this seriously." [level=2] [ref=e124]:
+        - text: Built for people
+        - text: who take this
+        - emphasis [ref=e125]: seriously.
+    - list [ref=e126]:
+      - listitem [ref=e127]:
+        - generic [ref=e128]:
+          - generic [ref=e129]: Tailored
+          - text: questions
+        - paragraph [ref=e130]: Every question is generated from your actual resume and the specific job description — not pulled from a list. If you've never done distributed systems, you won't be asked about them unless the role requires it.
+        - generic [ref=e131]: →
+      - listitem [ref=e132]:
+        - generic [ref=e133]:
+          - generic [ref=e134]: Instant
+          - text: scoring
+        - paragraph [ref=e135]: Submit your answer and get a score in seconds — on a 1–10 scale with specific commentary on clarity, relevance, and structure. No waiting, no vague feedback.
+        - generic [ref=e136]: →
+      - listitem [ref=e137]:
+        - generic [ref=e138]:
+          - generic [ref=e139]: Session
+          - text: history
+        - paragraph [ref=e140]: Every session is saved with your scores and tips. Practice multiple sessions for the same role and watch your performance arc improve over time.
+        - generic [ref=e141]: →
+      - listitem [ref=e142]:
+        - generic [ref=e143]:
+          - generic [ref=e144]: Honest
+          - text: tips
+        - paragraph [ref=e145]: After each session, one specific improvement tip per question. Not "be more confident." Real guidance on exactly what to change in your answer next time.
+        - generic [ref=e146]: →
+  - generic [ref=e147]:
+    - generic: “
+    - generic [ref=e148]:
+      - blockquote [ref=e149]: “I did three sessions the night before my Google interview. The questions were scarily accurate — one came up almost word for word. The feedback helped me fix answers I didn't know were weak.”
+      - generic [ref=e150]:
+        - generic [ref=e151]: S
+        - generic [ref=e152]:
+          - generic [ref=e153]: Sarah K.
+          - generic [ref=e154]: Software Engineer — now at Google
+  - generic [ref=e155]:
+    - heading "Your next offer starts here." [level=2] [ref=e156]:
+      - text: Your next offer
+      - text: starts here.
+    - generic [ref=e157]:
+      - link "Start practicing free →" [ref=e158] [cursor=pointer]:
+        - /url: /auth
+      - generic [ref=e159]: No credit card · Takes 2 minutes
+  - contentinfo [ref=e160]:
+    - generic [ref=e161]:
+      - generic [ref=e162]:
+        - generic [ref=e163]:
+          - link "Prep.AI" [ref=e164] [cursor=pointer]:
+            - /url: /
+          - paragraph [ref=e165]: AI-powered mock interviews that give you real feedback — so you walk into every room ready.
+        - generic [ref=e166]:
+          - generic [ref=e167]:
+            - paragraph [ref=e168]: Product
+            - list [ref=e169]:
+              - listitem [ref=e170]:
+                - link "How it Works" [ref=e171] [cursor=pointer]:
+                  - /url: /#how-it-works
+              - listitem [ref=e172]:
+                - link "Dashboard" [ref=e173] [cursor=pointer]:
+                  - /url: /dashboard
+              - listitem [ref=e174]:
+                - link "Pricing" [ref=e175] [cursor=pointer]:
+                  - /url: /upgrade
+              - listitem [ref=e176]:
+                - link "Changelog" [ref=e177] [cursor=pointer]:
+                  - /url: /changelog
+          - generic [ref=e178]:
+            - paragraph [ref=e179]: Company
+            - list [ref=e180]:
+              - listitem [ref=e181]:
+                - link "About" [ref=e182] [cursor=pointer]:
+                  - /url: /#features
+              - listitem [ref=e183]:
+                - link "Blog" [ref=e184] [cursor=pointer]:
+                  - /url: /blog
+              - listitem [ref=e185]:
+                - link "Careers" [ref=e186] [cursor=pointer]:
+                  - /url: /careers
+              - listitem [ref=e187]:
+                - link "Contact" [ref=e188] [cursor=pointer]:
+                  - /url: /contact
+          - generic [ref=e189]:
+            - paragraph [ref=e190]: Legal
+            - list [ref=e191]:
+              - listitem [ref=e192]:
+                - link "Privacy Policy" [ref=e193] [cursor=pointer]:
+                  - /url: /privacy
+              - listitem [ref=e194]:
+                - link "Terms of Service" [ref=e195] [cursor=pointer]:
+                  - /url: /terms
+              - listitem [ref=e196]:
+                - link "Cookie Policy" [ref=e197] [cursor=pointer]:
+                  - /url: /privacy#cookies
+      - generic [ref=e198]:
+        - paragraph [ref=e199]: © 2026 Prep.AI — All rights reserved.
+        - paragraph [ref=e200]: Made for job seekers everywhere.
