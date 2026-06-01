@@ -1,9 +1,4 @@
 {
   "version": 2,
-  "projectSettings": {
-    "framework": "nextjs",
-    "rootDirectory": "apps/web"
-  },
-  "buildCommand": "npm install && npm run build",
-  "installCommand": "npm install"
+  "buildCommand": "npm run build"
 }

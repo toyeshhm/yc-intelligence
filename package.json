@@ -3,6 +3,9 @@
   "private": true,
   "version": "1.0.0",
   "description": "Open-source YC company intelligence platform",
+  "workspaces": [
+    "apps/*"
+  ],
   "scripts": {
     "dev": "npm run dev --prefix apps/web",
     "build": "npm run build --prefix apps/web",
